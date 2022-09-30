@@ -42,11 +42,6 @@ Route::prefix('projects')->group(function () {
     Route::put('/{id}', [ProjectController::class, 'update']);
     Route::delete('/{id}', [ProjectController::class, 'delete']);
   });
-
-  
-  
-
-  
 });
 
 
