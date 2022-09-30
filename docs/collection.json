@@ -1,0 +1,988 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "3cdd97a7-3691-4a64-8bc6-70a6950066b0",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "description": "\nAPIs for auth",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"sed\",\"password\":\"distinctio\"}"
+                        },
+                        "description": "This endpoint enable the admin or the user to login",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjQ1NzY2NjQsImV4cCI6MTY2NDU4MDI2NCwibmJmIjoxNjY0NTc2NjY0LCJqdGkiOiJNbGdiTDZ4YUM2cUNxbVFLIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.m-PDyenIrHNvv0CTIybQ3XmYHeYTWG5EJ43GylbECMA\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"email\": [\n   \"The email field is required.\"\n ],\n \"password\": [\n   \"The password field is required.\"\n ]\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 402,
+                            "body": "{\n \"errors\": \"email or password is invalid, try again\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"illo\",\"email\":\"corrupti\",\"password\":\"velit\",\"password_confirmation\":\"et\"}"
+                        },
+                        "description": "This endpoint enable the admin or the user to register",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjQ1NzY2NjQsImV4cCI6MTY2NDU4MDI2NCwibmJmIjoxNjY0NTc2NjY0LCJqdGkiOiJNbGdiTDZ4YUM2cUNxbVFLIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.m-PDyenIrHNvv0CTIybQ3XmYHeYTWG5EJ43GylbECMA\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"name\": [\n   \"The name field is required.\"\n ],\n \"email\": [\n   \"The email has already been taken.\"\n ],\n \"password\": [\n   \"The password confirmation does not match.\"\n ]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/logout"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enable the admin or the user to logout",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"You have logged out successfully\"\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Project",
+            "description": "\nAPIs for projects",
+            "item": [
+                {
+                    "name": "Create a new project",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/projects",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/projects"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"magni\",\"description\":\"impedit\"}"
+                        },
+                        "description": "This endpoint enable the admin to create new project"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n \"project\": {\n   \"title\": \"project 2\",\n   \"description\": \"description\",\n   \"updated_at\": \"2022-09-30T20:10:47.000000Z\",\n   \"created_at\": \"2022-09-30T20:10:47.000000Z\",\n   \"id\": 1\n }\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"errors\": {\n   \"title\": [\n       \"The title field is required.\"\n   ]\n }\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "List the projects",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/projects",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/projects"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enable the admin to get all projects"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"projects\": [\n   {\n       \"id\": 1,\n       \"title\": \"updated title\",\n       \"description\": null,\n       \"created_at\": \"2022-09-30T20:10:47.000000Z\",\n       \"updated_at\": \"2022-09-30T20:49:13.000000Z\"\n   },\n   {\n       \"id\": 4,\n       \"title\": \"project 3\",\n       \"description\": \"description\",\n       \"created_at\": \"2022-09-30T20:54:40.000000Z\",\n       \"updated_at\": \"2022-09-30T20:54:40.000000Z\"\n   }\n ]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get a project",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/projects\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/projects\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "17",
+                                    "description": "The id of the project to be gotten."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enable the admin to get a project with specific id"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"project\": {\n   \"id\": 1,\n   \"title\": \"updated title\",\n   \"description\": null,\n   \"created_at\": \"2022-09-30T20:10:47.000000Z\",\n   \"updated_at\": \"2022-09-30T20:49:13.000000Z\"\n }\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n   \"errors\": \"This project doesn't exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update a project",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/projects\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/projects\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "16",
+                                    "description": "The id of the project to be updated."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"dolor\",\"description\":\"recusandae\"}"
+                        },
+                        "description": "This endpoint enable the admin to update a project"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n   \"message\": \"The project has been updated successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n   \"errors\": \"This project doesn't exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete a project",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/projects\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/projects\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "17",
+                                    "description": "The id of the project to be deleted."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enable the admin to delete a project with specific id"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n   \"message\": \"The project has been deleted successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n   \"errors\": \"This project doesn't exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Task",
+            "description": "\nAPIs for tasks",
+            "item": [
+                {
+                    "name": "Submit a task",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id\/submit",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id\/submit",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "The id of the task to be submitted."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"detail\":\"quasi\",\"done\":false}"
+                        },
+                        "description": "This endpoint enable the user to submit a task"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n   \"message\": \"The task has been submitted successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n   \"errors\": \"The task is already submitted\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n   \"errors\": \"You are not assigned to this task\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create a new task",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"sed\",\"description\":\"neque\",\"project_id\":12,\"user_id\":8}"
+                        },
+                        "description": "This endpoint enable the admin to create new task"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n \"task\": {\n   \"title\": \"task 2\",\n   \"description\": \"description\",\n   \"project_id\": \"1\",\n   \"user_id\": \"11\",\n   \"updated_at\": \"2022-09-30T21:20:07.000000Z\",\n   \"created_at\": \"2022-09-30T21:20:07.000000Z\",\n   \"id\": 2\n }\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"errors\": {\n   \"title\": [\n       \"The title field is required.\"\n   ]\n }\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "List the tasks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enable the admin to get all tasks"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"tasks\": [\n   {\n       \"id\": 2,\n       \"title\": \"task 2\",\n       \"description\": \"description\",\n       \"detail\": null,\n       \"done\": 0,\n       \"project_id\": 1,\n       \"user_id\": 11,\n       \"created_at\": \"2022-09-30T21:20:07.000000Z\",\n       \"updated_at\": \"2022-09-30T21:20:07.000000Z\"\n   },\n   {\n       \"id\": 3,\n       \"title\": \"task 33\",\n       \"description\": \"description\",\n       \"detail\": null,\n       \"done\": 0,\n       \"project_id\": 1,\n       \"user_id\": 11,\n       \"created_at\": \"2022-09-30T21:25:30.000000Z\",\n       \"updated_at\": \"2022-09-30T21:30:18.000000Z\"\n   }\n ]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get a task",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The id of the task to be gotten."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enable the admin to get a task with specific id"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"task\": {\n   \"id\": 3,\n   \"title\": \"task 33\",\n   \"description\": \"description\",\n   \"detail\": null,\n   \"done\": 0,\n   \"project_id\": 1,\n   \"user_id\": 11,\n   \"created_at\": \"2022-09-30T21:25:30.000000Z\",\n   \"updated_at\": \"2022-09-30T21:30:18.000000Z\"\n }\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n   \"errors\": \"This task doesn't exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update a task",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "The id of the task to be updated."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"qui\",\"description\":\"doloremque\",\"project_id\":12,\"user_id\":3,\"detail\":\"placeat\",\"done\":true}"
+                        },
+                        "description": "This endpoint enable the admin to update a task"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n   \"message\": \"The task has been updated successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n   \"errors\": \"This task doesn't exist\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"errors\": {\n   \"done\": [\n       \"The done field must be true or false.\"\n   ],\n   \"project_id\": [\n       \"The selected project id is invalid.\"\n   ]\n }\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete a task",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "8",
+                                    "description": "The id of the task to be deleted."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enable the admin to delete a task with specific id"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n   \"message\": \"The task has been deleted successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n   \"errors\": \"This task doesn't exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Assign user for a task",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id\/assign_employee\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id\/assign_employee\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "The id of the task."
+                                },
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "5",
+                                    "description": "The id of the user to be assigned."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enable the admin to assign a user for a task"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n   \"message\": \"The task has been submitted to Sofyan successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n   \"errors\": \"This user doesn't exist\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n   \"errors\": \"This task doesn't exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove assigned user from a task",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id\/no_employee",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id\/no_employee",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "The id of the task."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint enable the admin to remove the assigned user from a task"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n   \"message\": \"There is no user assigned to this task now\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n   \"errors\": \"This task doesn't exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "description": "\nAPIs for users",
+            "item": [
+                {
+                    "name": "Get all projects",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/projects\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/projects\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint returns all the user's projects"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"projects\": [\n   {\n       \"id\": 1,\n       \"title\": \"Test project\",\n       \"description\": \"new description\",\n       \"created_at\": \"2022-09-29 15:04:27\",\n       \"updated_at\": \"2022-09-29 15:04:27\"\n   }\n ]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get specific project",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/projects\/:id\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/projects\/:id\/users",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "13",
+                                    "description": "number The id of the project the user want to get."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint return the project with specific Id.\nThe user must be assigned to a task belongs to this project to be able to get access the project"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"project\": {\n   \"id\": 1,\n   \"title\": \"Test project\",\n   \"description\": \"new description\",\n   \"created_at\": \"2022-09-29 15:04:27\",\n   \"updated_at\": \"2022-09-29 15:04:27\"\n }\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n   \"errors\": \"This project doesn't belong to you\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get all tasks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint returns all the user's tasks"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"tasks\": [\n       {\n           \"id\": 1,\n           \"title\": \"Task 1\",\n           \"description\": \"description\",\n           \"detail\": null,\n           \"done\": 0,\n           \"project_id\": 1,\n           \"user_id\": 11,\n           \"created_at\": \"2022-09-29T15:04:38.000000Z\",\n           \"updated_at\": \"2022-09-29T16:56:22.000000Z\"\n       },\n       {\n           \"id\": 2,\n           \"title\": \"Task 2\",\n           \"description\": \"description\",\n           \"detail\": \"The tasks has been finished by sofyan\",\n           \"done\": 1,\n           \"project_id\": 1,\n           \"user_id\": 11,\n           \"created_at\": \"2022-09-29T15:10:12.000000Z\",\n           \"updated_at\": \"2022-09-29T16:43:31.000000Z\"\n       }\n   ]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get all submitted tasks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/submitted\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/submitted\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint returns all the user's submitted tasks"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"tasks\": [\n    {\n        \"id\": 2,\n        \"title\": \"Task 2\",\n        \"description\": \"description\",\n        \"detail\": \"The tasks has been finished by sofyan\",\n        \"done\": 1,\n        \"project_id\": 1,\n        \"user_id\": 11,\n        \"created_at\": \"2022-09-29T15:10:12.000000Z\",\n        \"updated_at\": \"2022-09-29T16:43:31.000000Z\"\n    }\n  ]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get all pending tasks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/pending\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/pending\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint returns all the user's pending tasks"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"tasks\": [\n    {\n      \"id\": 1,\n      \"title\": \"Task 1\",\n      \"description\": \"description\",\n      \"detail\": null,\n      \"done\": 0,\n      \"project_id\": 1,\n      \"user_id\": 11,\n      \"created_at\": \"2022-09-29T15:04:38.000000Z\",\n      \"updated_at\": \"2022-09-29T16:56:22.000000Z\"\n    }\n ]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get specific task",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id\/users",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "number The id of the task the user want to get."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint return the task with specific Id.\nThe user must be assigned to this task to be able to get access the task"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"task\": {\n   \"id\": 1,\n   \"title\": \"Task 1\",\n   \"description\": \"description\",\n   \"detail\": null,\n   \"done\": 0,\n   \"project_id\": 1,\n   \"user_id\": 11,\n   \"created_at\": \"2022-09-29T15:04:38.000000Z\",\n   \"updated_at\": \"2022-09-29T16:56:22.000000Z\"\n }\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n   \"errors\": \"This task doesn't belong to you\"\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer"
+    }
+}

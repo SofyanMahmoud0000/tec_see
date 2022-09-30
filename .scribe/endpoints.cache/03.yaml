@@ -29,11 +29,11 @@ endpoints:
         name: id
         description: 'The id of the task to be submitted.'
         required: true
-        example: 6
+        example: 4
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 6
+      id: 4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -41,19 +41,19 @@ endpoints:
         name: detail
         description: ''
         required: false
-        example: non
+        example: quasi
         type: string
         custom: []
       done:
         name: done
         description: ''
         required: true
-        example: true
+        example: false
         type: boolean
         custom: []
     cleanBodyParameters:
-      detail: non
-      done: true
+      detail: quasi
+      done: false
     fileParameters: []
     responses:
       -
@@ -87,7 +87,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer d3aZeh841vEPfDca6k5V6gb'
+      - 'Bearer ae81a3fdDh456bEV6gvPkZc'
     controller: null
     method: null
     route: null
@@ -120,35 +120,35 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: laboriosam
+        example: sed
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: false
-        example: incidunt
+        example: neque
         type: string.
         custom: []
       project_id:
         name: project_id
         description: 'The id of the project which the task belong to.'
         required: true
-        example: 15
+        example: 12
         type: integer
         custom: []
       user_id:
         name: user_id
         description: 'The id of the user assigned to this task.'
         required: true
-        example: 9
+        example: 8
         type: integer
         custom: []
     cleanBodyParameters:
-      title: laboriosam
-      description: incidunt
-      project_id: 15
-      user_id: 9
+      title: sed
+      description: neque
+      project_id: 12
+      user_id: 8
     fileParameters: []
     responses:
       -
@@ -185,7 +185,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer DVbfa6d4Ece1akg856PZhv3'
+      - 'Bearer kDahV6bac4vP3d1EefZ685g'
     controller: null
     method: null
     route: null
@@ -253,7 +253,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer eZh6vfbaa6Vd5Dkg8cE3P14'
+      - 'Bearer 48EPa6k5cvbZfaDg1Vd6h3e'
     controller: null
     method: null
     route: null
@@ -282,11 +282,11 @@ endpoints:
         name: id
         description: 'The id of the task to be gotten.'
         required: true
-        example: 7
+        example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 7
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -325,7 +325,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 5Eefchvgkd6a81D4Z3a6VPb'
+      - 'Bearer 4Zkvh6c5EVDgfdP6eb8a1a3'
     controller: null
     method: null
     route: null
@@ -354,11 +354,11 @@ endpoints:
         name: id
         description: 'The id of the task to be updated.'
         required: true
-        example: 16
+        example: 4
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -366,35 +366,35 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: incidunt
+        example: qui
         type: string.
         custom: []
       description:
         name: description
         description: ''
         required: false
-        example: facere
+        example: doloremque
         type: string.
         custom: []
       project_id:
         name: project_id
         description: 'The id of the project which the task belong to.'
         required: true
-        example: 4
+        example: 12
         type: integer
         custom: []
       user_id:
         name: user_id
         description: 'The id of the user assigned to this task.'
         required: true
-        example: 12
+        example: 3
         type: integer
         custom: []
       detail:
         name: detail
         description: ''
         required: false
-        example: dicta
+        example: placeat
         type: string
         custom: []
       done:
@@ -405,11 +405,11 @@ endpoints:
         type: boolean
         custom: []
     cleanBodyParameters:
-      title: incidunt
-      description: facere
-      project_id: 4
-      user_id: 12
-      detail: dicta
+      title: qui
+      description: doloremque
+      project_id: 12
+      user_id: 3
+      detail: placeat
       done: true
     fileParameters: []
     responses:
@@ -451,7 +451,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4E536P6bVcefD8haakZg1vd'
+      - 'Bearer E4ghD16ZbVefaaPk3vcd685'
     controller: null
     method: null
     route: null
@@ -480,11 +480,11 @@ endpoints:
         name: id
         description: 'The id of the task to be deleted.'
         required: true
-        example: 9
+        example: 8
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 9
+      id: 8
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -513,7 +513,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1ebEPV6c5kah3v6a4Z8gdfD'
+      - 'Bearer kv6DcVg3fa8P5ebZahE64d1'
     controller: null
     method: null
     route: null
@@ -542,19 +542,19 @@ endpoints:
         name: id
         description: 'The id of the task.'
         required: true
-        example: 8
+        example: 4
         type: integer
         custom: []
       user_id:
         name: user_id
         description: 'The id of the user to be assigned.'
         required: true
-        example: 14
+        example: 5
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 8
-      user_id: 14
+      id: 4
+      user_id: 5
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -592,7 +592,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8Vec361Zfab4k5DEhgdaP6v'
+      - 'Bearer b6fZ5E8devaV1khDa3gP64c'
     controller: null
     method: null
     route: null
@@ -621,11 +621,11 @@ endpoints:
         name: id
         description: 'The id of the task.'
         required: true
-        example: 9
+        example: 4
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 9
+      id: 4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -654,7 +654,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer cv3bead6hPV6g14ZDakE85f'
+      - 'Bearer vcgE18PV664fDk5ahab3deZ'
     controller: null
     method: null
     route: null

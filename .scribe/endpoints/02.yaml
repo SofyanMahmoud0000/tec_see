@@ -31,19 +31,19 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: modi
+        example: magni
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: false
-        example: porro
+        example: impedit
         type: string.
         custom: []
     cleanBodyParameters:
-      title: modi
-      description: porro
+      title: magni
+      description: impedit
     fileParameters: []
     responses:
       -
@@ -78,7 +78,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer V6D5aPE1d6h8e34kacvgbfZ'
+      - 'Bearer 665abZdekEf8v3DVcagh1P4'
     controller: null
     method: null
     route: null
@@ -138,7 +138,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer gf8evd4D5Pakb6E3c61VhaZ'
+      - 'Bearer 1kbPEfha58ae6D3vc4Z6dgV'
     controller: null
     method: null
     route: null
@@ -167,11 +167,11 @@ endpoints:
         name: id
         description: 'The id of the project to be gotten.'
         required: true
-        example: 15
+        example: 17
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 15
+      id: 17
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -206,7 +206,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a6gDEdhZbP46f83Ve1kva5c'
+      - 'Bearer bhagekP46aZcdVDE8165v3f'
     controller: null
     method: null
     route: null
@@ -235,11 +235,11 @@ endpoints:
         name: id
         description: 'The id of the project to be updated.'
         required: true
-        example: 4
+        example: 16
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 4
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -247,19 +247,19 @@ endpoints:
         name: title
         description: ''
         required: false
-        example: vero
+        example: dolor
         type: string.
         custom: []
       description:
         name: description
         description: ''
         required: false
-        example: labore
+        example: recusandae
         type: string.
         custom: []
     cleanBodyParameters:
-      title: vero
-      description: labore
+      title: dolor
+      description: recusandae
     fileParameters: []
     responses:
       -
@@ -284,7 +284,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bPkh6Ve8vcf5d1ga4ZED63a'
+      - 'Bearer cghae8DPv3akV4fZ61db56E'
     controller: null
     method: null
     route: null
@@ -313,11 +313,11 @@ endpoints:
         name: id
         description: 'The id of the project to be deleted.'
         required: true
-        example: 16
+        example: 17
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 17
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -346,7 +346,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3kP5f6cgavDE1d8e4aZbh6V'
+      - 'Bearer DVv53fP61dcaZhbkg8e4a6E'
     controller: null
     method: null
     route: null

@@ -1,0 +1,1648 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/auth/login:
+    post:
+      summary: Login
+      description: 'This endpoint enable the admin or the user to login'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjQ1NzY2NjQsImV4cCI6MTY2NDU4MDI2NCwibmJmIjoxNjY0NTc2NjY0LCJqdGkiOiJNbGdiTDZ4YUM2cUNxbVFLIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.m-PDyenIrHNvv0CTIybQ3XmYHeYTWG5EJ43GylbECMA
+                properties:
+                  token:
+                    type: string
+                    example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjQ1NzY2NjQsImV4cCI6MTY2NDU4MDI2NCwibmJmIjoxNjY0NTc2NjY0LCJqdGkiOiJNbGdiTDZ4YUM2cUNxbVFLIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.m-PDyenIrHNvv0CTIybQ3XmYHeYTWG5EJ43GylbECMA
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  email:
+                    - 'The email field is required.'
+                  password:
+                    - 'The password field is required.'
+                properties:
+                  email:
+                    type: array
+                    example:
+                      - 'The email field is required.'
+                    items:
+                      type: string
+                  password:
+                    type: array
+                    example:
+                      - 'The password field is required.'
+                    items:
+                      type: string
+        402:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'email or password is invalid, try again'
+                properties:
+                  errors:
+                    type: string
+                    example: 'email or password is invalid, try again'
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: sed
+                password:
+                  type: string
+                  description: ''
+                  example: distinctio
+              required:
+                - email
+                - password
+      security: []
+  /api/auth/register:
+    post:
+      summary: Register
+      description: 'This endpoint enable the admin or the user to register'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjQ1NzY2NjQsImV4cCI6MTY2NDU4MDI2NCwibmJmIjoxNjY0NTc2NjY0LCJqdGkiOiJNbGdiTDZ4YUM2cUNxbVFLIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.m-PDyenIrHNvv0CTIybQ3XmYHeYTWG5EJ43GylbECMA
+                properties:
+                  token:
+                    type: string
+                    example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjQ1NzY2NjQsImV4cCI6MTY2NDU4MDI2NCwibmJmIjoxNjY0NTc2NjY0LCJqdGkiOiJNbGdiTDZ4YUM2cUNxbVFLIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.m-PDyenIrHNvv0CTIybQ3XmYHeYTWG5EJ43GylbECMA
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  name:
+                    - 'The name field is required.'
+                  email:
+                    - 'The email has already been taken.'
+                  password:
+                    - 'The password confirmation does not match.'
+                properties:
+                  name:
+                    type: array
+                    example:
+                      - 'The name field is required.'
+                    items:
+                      type: string
+                  email:
+                    type: array
+                    example:
+                      - 'The email has already been taken.'
+                    items:
+                      type: string
+                  password:
+                    type: array
+                    example:
+                      - 'The password confirmation does not match.'
+                    items:
+                      type: string
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: illo
+                email:
+                  type: string
+                  description: ''
+                  example: corrupti
+                password:
+                  type: string
+                  description: ''
+                  example: velit
+                password_confirmation:
+                  type: string
+                  description: 'Enter the password again to confirm it'
+                  example: et
+              required:
+                - name
+                - email
+                - password
+                - password_confirmation
+      security: []
+  /api/auth/logout:
+    delete:
+      summary: Logout
+      description: 'This endpoint enable the admin or the user to logout'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'You have logged out successfully'
+                properties:
+                  message:
+                    type: string
+                    example: 'You have logged out successfully'
+      tags:
+        - Auth
+      security: []
+  /api/projects:
+    post:
+      summary: 'Create a new project'
+      description: 'This endpoint enable the admin to create new project'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  project:
+                    title: 'project 2'
+                    description: description
+                    updated_at: '2022-09-30T20:10:47.000000Z'
+                    created_at: '2022-09-30T20:10:47.000000Z'
+                    id: 1
+                properties:
+                  project:
+                    type: object
+                    example:
+                      title: 'project 2'
+                      description: description
+                      updated_at: '2022-09-30T20:10:47.000000Z'
+                      created_at: '2022-09-30T20:10:47.000000Z'
+                      id: 1
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors:
+                    title:
+                      - 'The title field is required.'
+                properties:
+                  errors:
+                    type: object
+                    example:
+                      title:
+                        - 'The title field is required.'
+      tags:
+        - Project
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: magni
+                description:
+                  type: string.
+                  description: ''
+                  example: impedit
+              required:
+                - title
+    get:
+      summary: 'List the projects'
+      description: 'This endpoint enable the admin to get all projects'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  projects:
+                    -
+                      id: 1
+                      title: 'updated title'
+                      description: null
+                      created_at: '2022-09-30T20:10:47.000000Z'
+                      updated_at: '2022-09-30T20:49:13.000000Z'
+                    -
+                      id: 4
+                      title: 'project 3'
+                      description: description
+                      created_at: '2022-09-30T20:54:40.000000Z'
+                      updated_at: '2022-09-30T20:54:40.000000Z'
+                properties:
+                  projects:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'updated title'
+                        description: null
+                        created_at: '2022-09-30T20:10:47.000000Z'
+                        updated_at: '2022-09-30T20:49:13.000000Z'
+                      -
+                        id: 4
+                        title: 'project 3'
+                        description: description
+                        created_at: '2022-09-30T20:54:40.000000Z'
+                        updated_at: '2022-09-30T20:54:40.000000Z'
+                    items:
+                      type: object
+      tags:
+        - Project
+  '/api/projects/{id}':
+    get:
+      summary: 'Get a project'
+      description: 'This endpoint enable the admin to get a project with specific id'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  project:
+                    id: 1
+                    title: 'updated title'
+                    description: null
+                    created_at: '2022-09-30T20:10:47.000000Z'
+                    updated_at: '2022-09-30T20:49:13.000000Z'
+                properties:
+                  project:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'updated title'
+                      description: null
+                      created_at: '2022-09-30T20:10:47.000000Z'
+                      updated_at: '2022-09-30T20:49:13.000000Z'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This project doesn''t exist'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This project doesn''t exist'
+      tags:
+        - Project
+    put:
+      summary: 'Update a project'
+      description: 'This endpoint enable the admin to update a project'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The project has been updated successfully'
+                properties:
+                  message:
+                    type: string
+                    example: 'The project has been updated successfully'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This project doesn''t exist'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This project doesn''t exist'
+      tags:
+        - Project
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string.
+                  description: ''
+                  example: dolor
+                description:
+                  type: string.
+                  description: ''
+                  example: recusandae
+    delete:
+      summary: 'Delete a project'
+      description: 'This endpoint enable the admin to delete a project with specific id'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The project has been deleted successfully'
+                properties:
+                  message:
+                    type: string
+                    example: 'The project has been deleted successfully'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This project doesn''t exist'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This project doesn''t exist'
+      tags:
+        - Project
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The id of the project to be gotten.'
+        example: 17
+        required: true
+        schema:
+          type: integer
+  '/api/tasks/{id}/submit':
+    post:
+      summary: 'Submit a task'
+      description: 'This endpoint enable the user to submit a task'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The task has been submitted successfully'
+                properties:
+                  message:
+                    type: string
+                    example: 'The task has been submitted successfully'
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'The task is already submitted'
+                properties:
+                  errors:
+                    type: string
+                    example: 'The task is already submitted'
+        403:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'You are not assigned to this task'
+                properties:
+                  errors:
+                    type: string
+                    example: 'You are not assigned to this task'
+      tags:
+        - Task
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                detail:
+                  type: string
+                  description: ''
+                  example: quasi
+                done:
+                  type: boolean
+                  description: ''
+                  example: false
+              required:
+                - done
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The id of the task to be submitted.'
+        example: 4
+        required: true
+        schema:
+          type: integer
+  /api/tasks:
+    post:
+      summary: 'Create a new task'
+      description: 'This endpoint enable the admin to create new task'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  task:
+                    title: 'task 2'
+                    description: description
+                    project_id: '1'
+                    user_id: '11'
+                    updated_at: '2022-09-30T21:20:07.000000Z'
+                    created_at: '2022-09-30T21:20:07.000000Z'
+                    id: 2
+                properties:
+                  task:
+                    type: object
+                    example:
+                      title: 'task 2'
+                      description: description
+                      project_id: '1'
+                      user_id: '11'
+                      updated_at: '2022-09-30T21:20:07.000000Z'
+                      created_at: '2022-09-30T21:20:07.000000Z'
+                      id: 2
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors:
+                    title:
+                      - 'The title field is required.'
+                properties:
+                  errors:
+                    type: object
+                    example:
+                      title:
+                        - 'The title field is required.'
+      tags:
+        - Task
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: sed
+                description:
+                  type: string.
+                  description: ''
+                  example: neque
+                project_id:
+                  type: integer
+                  description: 'The id of the project which the task belong to.'
+                  example: 12
+                user_id:
+                  type: integer
+                  description: 'The id of the user assigned to this task.'
+                  example: 8
+              required:
+                - title
+                - project_id
+                - user_id
+    get:
+      summary: 'List the tasks'
+      description: 'This endpoint enable the admin to get all tasks'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  tasks:
+                    -
+                      id: 2
+                      title: 'task 2'
+                      description: description
+                      detail: null
+                      done: 0
+                      project_id: 1
+                      user_id: 11
+                      created_at: '2022-09-30T21:20:07.000000Z'
+                      updated_at: '2022-09-30T21:20:07.000000Z'
+                    -
+                      id: 3
+                      title: 'task 33'
+                      description: description
+                      detail: null
+                      done: 0
+                      project_id: 1
+                      user_id: 11
+                      created_at: '2022-09-30T21:25:30.000000Z'
+                      updated_at: '2022-09-30T21:30:18.000000Z'
+                properties:
+                  tasks:
+                    type: array
+                    example:
+                      -
+                        id: 2
+                        title: 'task 2'
+                        description: description
+                        detail: null
+                        done: 0
+                        project_id: 1
+                        user_id: 11
+                        created_at: '2022-09-30T21:20:07.000000Z'
+                        updated_at: '2022-09-30T21:20:07.000000Z'
+                      -
+                        id: 3
+                        title: 'task 33'
+                        description: description
+                        detail: null
+                        done: 0
+                        project_id: 1
+                        user_id: 11
+                        created_at: '2022-09-30T21:25:30.000000Z'
+                        updated_at: '2022-09-30T21:30:18.000000Z'
+                    items:
+                      type: object
+      tags:
+        - Task
+  '/api/tasks/{id}':
+    get:
+      summary: 'Get a task'
+      description: 'This endpoint enable the admin to get a task with specific id'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  task:
+                    id: 3
+                    title: 'task 33'
+                    description: description
+                    detail: null
+                    done: 0
+                    project_id: 1
+                    user_id: 11
+                    created_at: '2022-09-30T21:25:30.000000Z'
+                    updated_at: '2022-09-30T21:30:18.000000Z'
+                properties:
+                  task:
+                    type: object
+                    example:
+                      id: 3
+                      title: 'task 33'
+                      description: description
+                      detail: null
+                      done: 0
+                      project_id: 1
+                      user_id: 11
+                      created_at: '2022-09-30T21:25:30.000000Z'
+                      updated_at: '2022-09-30T21:30:18.000000Z'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This task doesn''t exist'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This task doesn''t exist'
+      tags:
+        - Task
+    put:
+      summary: 'Update a task'
+      description: 'This endpoint enable the admin to update a task'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The task has been updated successfully'
+                properties:
+                  message:
+                    type: string
+                    example: 'The task has been updated successfully'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This task doesn''t exist'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This task doesn''t exist'
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors:
+                    done:
+                      - 'The done field must be true or false.'
+                    project_id:
+                      - 'The selected project id is invalid.'
+                properties:
+                  errors:
+                    type: object
+                    example:
+                      done:
+                        - 'The done field must be true or false.'
+                      project_id:
+                        - 'The selected project id is invalid.'
+      tags:
+        - Task
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string.
+                  description: ''
+                  example: qui
+                description:
+                  type: string.
+                  description: ''
+                  example: doloremque
+                project_id:
+                  type: integer
+                  description: 'The id of the project which the task belong to.'
+                  example: 12
+                user_id:
+                  type: integer
+                  description: 'The id of the user assigned to this task.'
+                  example: 3
+                detail:
+                  type: string
+                  description: ''
+                  example: placeat
+                done:
+                  type: boolean
+                  description: ''
+                  example: true
+              required:
+                - project_id
+                - user_id
+    delete:
+      summary: 'Delete a task'
+      description: 'This endpoint enable the admin to delete a task with specific id'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The task has been deleted successfully'
+                properties:
+                  message:
+                    type: string
+                    example: 'The task has been deleted successfully'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This task doesn''t exist'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This task doesn''t exist'
+      tags:
+        - Task
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The id of the task to be gotten.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/tasks/{id}/assign_employee/{user_id}':
+    get:
+      summary: 'Assign user for a task'
+      description: 'This endpoint enable the admin to assign a user for a task'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The task has been submitted to Sofyan successfully'
+                properties:
+                  message:
+                    type: string
+                    example: 'The task has been submitted to Sofyan successfully'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This task doesn''t exist'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This task doesn''t exist'
+      tags:
+        - Task
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The id of the task.'
+        example: 4
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: user_id
+        description: 'The id of the user to be assigned.'
+        example: 5
+        required: true
+        schema:
+          type: integer
+  '/api/tasks/{id}/no_employee':
+    get:
+      summary: 'Remove assigned user from a task'
+      description: 'This endpoint enable the admin to remove the assigned user from a task'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'There is no user assigned to this task now'
+                properties:
+                  message:
+                    type: string
+                    example: 'There is no user assigned to this task now'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This task doesn''t exist'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This task doesn''t exist'
+      tags:
+        - Task
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The id of the task.'
+        example: 4
+        required: true
+        schema:
+          type: integer
+  /api/projects/users:
+    get:
+      summary: 'Get all projects'
+      description: 'This endpoint returns all the user''s projects'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  projects:
+                    -
+                      id: 1
+                      title: 'Test project'
+                      description: 'new description'
+                      created_at: '2022-09-29 15:04:27'
+                      updated_at: '2022-09-29 15:04:27'
+                properties:
+                  projects:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Test project'
+                        description: 'new description'
+                        created_at: '2022-09-29 15:04:27'
+                        updated_at: '2022-09-29 15:04:27'
+                    items:
+                      type: object
+      tags:
+        - User
+  '/api/projects/{id}/users':
+    get:
+      summary: 'Get specific project'
+      description: "This endpoint return the project with specific Id.\nThe user must be assigned to a task belongs to this project to be able to get access the project"
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  project:
+                    id: 1
+                    title: 'Test project'
+                    description: 'new description'
+                    created_at: '2022-09-29 15:04:27'
+                    updated_at: '2022-09-29 15:04:27'
+                properties:
+                  project:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'Test project'
+                      description: 'new description'
+                      created_at: '2022-09-29 15:04:27'
+                      updated_at: '2022-09-29 15:04:27'
+        403:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This project doesn''t belong to you'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This project doesn''t belong to you'
+      tags:
+        - User
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'number The id of the project the user want to get.'
+        example: 13
+        required: true
+        schema:
+          type: integer
+  /api/tasks/users:
+    get:
+      summary: 'Get all tasks'
+      description: 'This endpoint returns all the user''s tasks'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  tasks:
+                    -
+                      id: 1
+                      title: 'Task 1'
+                      description: description
+                      detail: null
+                      done: 0
+                      project_id: 1
+                      user_id: 11
+                      created_at: '2022-09-29T15:04:38.000000Z'
+                      updated_at: '2022-09-29T16:56:22.000000Z'
+                    -
+                      id: 2
+                      title: 'Task 2'
+                      description: description
+                      detail: 'The tasks has been finished by sofyan'
+                      done: 1
+                      project_id: 1
+                      user_id: 11
+                      created_at: '2022-09-29T15:10:12.000000Z'
+                      updated_at: '2022-09-29T16:43:31.000000Z'
+                properties:
+                  tasks:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Task 1'
+                        description: description
+                        detail: null
+                        done: 0
+                        project_id: 1
+                        user_id: 11
+                        created_at: '2022-09-29T15:04:38.000000Z'
+                        updated_at: '2022-09-29T16:56:22.000000Z'
+                      -
+                        id: 2
+                        title: 'Task 2'
+                        description: description
+                        detail: 'The tasks has been finished by sofyan'
+                        done: 1
+                        project_id: 1
+                        user_id: 11
+                        created_at: '2022-09-29T15:10:12.000000Z'
+                        updated_at: '2022-09-29T16:43:31.000000Z'
+                    items:
+                      type: object
+      tags:
+        - User
+  /api/tasks/submitted/users:
+    get:
+      summary: 'Get all submitted tasks'
+      description: 'This endpoint returns all the user''s submitted tasks'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  tasks:
+                    -
+                      id: 2
+                      title: 'Task 2'
+                      description: description
+                      detail: 'The tasks has been finished by sofyan'
+                      done: 1
+                      project_id: 1
+                      user_id: 11
+                      created_at: '2022-09-29T15:10:12.000000Z'
+                      updated_at: '2022-09-29T16:43:31.000000Z'
+                properties:
+                  tasks:
+                    type: array
+                    example:
+                      -
+                        id: 2
+                        title: 'Task 2'
+                        description: description
+                        detail: 'The tasks has been finished by sofyan'
+                        done: 1
+                        project_id: 1
+                        user_id: 11
+                        created_at: '2022-09-29T15:10:12.000000Z'
+                        updated_at: '2022-09-29T16:43:31.000000Z'
+                    items:
+                      type: object
+      tags:
+        - User
+  /api/tasks/pending/users:
+    get:
+      summary: 'Get all pending tasks'
+      description: 'This endpoint returns all the user''s pending tasks'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  tasks:
+                    -
+                      id: 1
+                      title: 'Task 1'
+                      description: description
+                      detail: null
+                      done: 0
+                      project_id: 1
+                      user_id: 11
+                      created_at: '2022-09-29T15:04:38.000000Z'
+                      updated_at: '2022-09-29T16:56:22.000000Z'
+                properties:
+                  tasks:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Task 1'
+                        description: description
+                        detail: null
+                        done: 0
+                        project_id: 1
+                        user_id: 11
+                        created_at: '2022-09-29T15:04:38.000000Z'
+                        updated_at: '2022-09-29T16:56:22.000000Z'
+                    items:
+                      type: object
+      tags:
+        - User
+  '/api/tasks/{id}/users':
+    get:
+      summary: 'Get specific task'
+      description: "This endpoint return the task with specific Id.\nThe user must be assigned to this task to be able to get access the task"
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  task:
+                    id: 1
+                    title: 'Task 1'
+                    description: description
+                    detail: null
+                    done: 0
+                    project_id: 1
+                    user_id: 11
+                    created_at: '2022-09-29T15:04:38.000000Z'
+                    updated_at: '2022-09-29T16:56:22.000000Z'
+                properties:
+                  task:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'Task 1'
+                      description: description
+                      detail: null
+                      done: 0
+                      project_id: 1
+                      user_id: 11
+                      created_at: '2022-09-29T15:04:38.000000Z'
+                      updated_at: '2022-09-29T16:56:22.000000Z'
+        403:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'This task doesn''t belong to you'
+                properties:
+                  errors:
+                    type: string
+                    example: 'This task doesn''t belong to you'
+      tags:
+        - User
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'number The id of the task the user want to get.'
+        example: 7
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Auth
+    description: "\nAPIs for auth"
+  -
+    name: Project
+    description: "\nAPIs for projects"
+  -
+    name: Task
+    description: "\nAPIs for tasks"
+  -
+    name: User
+    description: "\nAPIs for users"
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []
