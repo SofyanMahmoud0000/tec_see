@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Tec-see APIs documentation",
-        "_postman_id": "d4724eef-f00e-40ae-9da1-d7e2a4b2e846",
+        "_postman_id": "49d0cf73-d80e-4a64-b8ec-4624123336c6",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"odio\",\"password\":\"aut\"}"
+                            "raw": "{\"email\":\"enim\",\"password\":\"aliquam\"}"
                         },
                         "description": "This endpoint enable the admin or the user to login",
                         "auth": {
@@ -91,7 +91,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"numquam\",\"email\":\"ut\",\"password\":\"eos\",\"password_confirmation\":\"officiis\"}"
+                            "raw": "{\"name\":\"ea\",\"email\":\"atque\",\"password\":\"ad\",\"password_confirmation\":\"vitae\"}"
                         },
                         "description": "This endpoint enable the admin or the user to register",
                         "auth": {
@@ -176,7 +176,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"in\",\"description\":\"atque\"}"
+                            "raw": "{\"title\":\"molestiae\",\"description\":\"et\"}"
                         },
                         "description": "This endpoint enable the admin to create new project"
                     },
@@ -239,7 +239,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "11",
+                                    "value": "2",
                                     "description": "The id of the project to be gotten."
                                 }
                             ]
@@ -285,7 +285,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9",
+                                    "value": "10",
                                     "description": "The id of the project to be updated."
                                 }
                             ]
@@ -303,7 +303,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"est\",\"description\":\"facere\"}"
+                            "raw": "{\"title\":\"voluptatem\",\"description\":\"eligendi\"}"
                         },
                         "description": "This endpoint enable the admin to update a project"
                     },
@@ -334,7 +334,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "3",
+                                    "value": "14",
                                     "description": "The id of the project to be deleted."
                                 }
                             ]
@@ -418,7 +418,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "11",
+                                    "value": "20",
                                     "description": "number The id of the project the user want to get."
                                 }
                             ]
@@ -480,7 +480,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"rerum\",\"description\":\"aut\",\"project_id\":6,\"user_id\":20}"
+                            "raw": "{\"title\":\"aut\",\"description\":\"eos\",\"project_id\":13,\"user_id\":1}"
                         },
                         "description": "This endpoint enable the admin to create new task"
                     },
@@ -543,7 +543,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "11",
+                                    "value": "2",
                                     "description": "The id of the task to be gotten."
                                 }
                             ]
@@ -589,7 +589,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "11",
+                                    "value": "13",
                                     "description": "The id of the task to be updated."
                                 }
                             ]
@@ -607,7 +607,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"maxime\",\"description\":\"minima\",\"project_id\":4,\"user_id\":16,\"detail\":\"iure\",\"done\":false}"
+                            "raw": "{\"title\":\"quod\",\"description\":\"quo\",\"project_id\":18,\"user_id\":11,\"detail\":\"veritatis\",\"done\":true}"
                         },
                         "description": "This endpoint enable the admin to update a task"
                     },
@@ -644,7 +644,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "7",
+                                    "value": "4",
                                     "description": "The id of the task to be deleted."
                                 }
                             ]
@@ -690,13 +690,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "12",
+                                    "value": "14",
                                     "description": "The id of the task."
                                 },
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "5",
+                                    "value": "10",
                                     "description": "The id of the user to be assigned."
                                 }
                             ]
@@ -748,7 +748,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "7",
+                                    "value": "14",
                                     "description": "The id of the task."
                                 }
                             ]
@@ -800,7 +800,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "15",
+                                    "value": "18",
                                     "description": "The id of the task to be submitted."
                                 }
                             ]
@@ -818,7 +818,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"detail\":\"recusandae\"}"
+                            "raw": "{\"detail\":\"sint\"}"
                         },
                         "description": ""
                     },
@@ -951,7 +951,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "4",
+                                    "value": "19",
                                     "description": "number The id of the task the user want to get."
                                 }
                             ]

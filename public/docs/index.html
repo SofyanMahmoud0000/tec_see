@@ -211,8 +211,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"odio\",
-    \"password\": \"aut\"
+    \"email\": \"enim\",
+    \"password\": \"aliquam\"
 }"
 </code></pre></div>
 
@@ -228,8 +228,8 @@ const headers = {
 };
 
 let body = {
-    "email": "odio",
-    "password": "aut"
+    "email": "enim",
+    "password": "aliquam"
 };
 
 fetch(url, {
@@ -307,7 +307,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth-login"
-               value="odio"
+               value="enim"
                data-component="body" hidden>
     <br>
 
@@ -319,7 +319,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth-login"
-               value="aut"
+               value="aliquam"
                data-component="body" hidden>
     <br>
 
@@ -343,10 +343,10 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"numquam\",
-    \"email\": \"ut\",
-    \"password\": \"eos\",
-    \"password_confirmation\": \"officiis\"
+    \"name\": \"ea\",
+    \"email\": \"atque\",
+    \"password\": \"ad\",
+    \"password_confirmation\": \"vitae\"
 }"
 </code></pre></div>
 
@@ -362,10 +362,10 @@ const headers = {
 };
 
 let body = {
-    "name": "numquam",
-    "email": "ut",
-    "password": "eos",
-    "password_confirmation": "officiis"
+    "name": "ea",
+    "email": "atque",
+    "password": "ad",
+    "password_confirmation": "vitae"
 };
 
 fetch(url, {
@@ -437,7 +437,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-auth-register"
-               value="numquam"
+               value="ea"
                data-component="body" hidden>
     <br>
 
@@ -449,7 +449,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth-register"
-               value="ut"
+               value="atque"
                data-component="body" hidden>
     <br>
 
@@ -461,7 +461,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth-register"
-               value="eos"
+               value="ad"
                data-component="body" hidden>
     <br>
 
@@ -473,7 +473,7 @@ fetch(url, {
                 <input type="text"
                name="password_confirmation"
                data-endpoint="POSTapi-auth-register"
-               value="officiis"
+               value="vitae"
                data-component="body" hidden>
     <br>
 <p>Enter the password again to confirm it</p>
@@ -576,8 +576,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"in\",
-    \"description\": \"atque\"
+    \"title\": \"molestiae\",
+    \"description\": \"et\"
 }"
 </code></pre></div>
 
@@ -594,8 +594,8 @@ const headers = {
 };
 
 let body = {
-    "title": "in",
-    "description": "atque"
+    "title": "molestiae",
+    "description": "et"
 };
 
 fetch(url, {
@@ -678,7 +678,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-projects"
-               value="in"
+               value="molestiae"
                data-component="body" hidden>
     <br>
 
@@ -690,7 +690,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-projects"
-               value="atque"
+               value="et"
                data-component="body" hidden>
     <br>
 
@@ -811,7 +811,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/projects/11" \
+    --get "http://localhost/api/projects/2" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -819,7 +819,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/projects/11"
+    "http://localhost/api/projects/2"
 );
 
 const headers = {
@@ -903,7 +903,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-projects--id-"
-               value="11"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>The id of the project to be gotten.</p>
@@ -924,20 +924,20 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/projects/9" \
+    "http://localhost/api/projects/10" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"est\",
-    \"description\": \"facere\"
+    \"title\": \"voluptatem\",
+    \"description\": \"eligendi\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/projects/9"
+    "http://localhost/api/projects/10"
 );
 
 const headers = {
@@ -947,8 +947,8 @@ const headers = {
 };
 
 let body = {
-    "title": "est",
-    "description": "facere"
+    "title": "voluptatem",
+    "description": "eligendi"
 };
 
 fetch(url, {
@@ -1021,7 +1021,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-projects--id-"
-               value="9"
+               value="10"
                data-component="url" hidden>
     <br>
 <p>The id of the project to be updated.</p>
@@ -1034,7 +1034,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="PUTapi-projects--id-"
-               value="est"
+               value="voluptatem"
                data-component="body" hidden>
     <br>
 
@@ -1046,7 +1046,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="PUTapi-projects--id-"
-               value="facere"
+               value="eligendi"
                data-component="body" hidden>
     <br>
 
@@ -1067,7 +1067,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/projects/3" \
+    "http://localhost/api/projects/14" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1075,7 +1075,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/projects/3"
+    "http://localhost/api/projects/14"
 );
 
 const headers = {
@@ -1153,7 +1153,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-projects--id-"
-               value="3"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The id of the project to be deleted.</p>
@@ -1271,7 +1271,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/projects/11/users" \
+    --get "http://localhost/api/projects/20/users" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1279,7 +1279,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/projects/11/users"
+    "http://localhost/api/projects/20/users"
 );
 
 const headers = {
@@ -1363,7 +1363,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-projects--id--users"
-               value="11"
+               value="20"
                data-component="url" hidden>
     <br>
 <p>number The id of the project the user want to get.</p>
@@ -1393,10 +1393,10 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"rerum\",
-    \"description\": \"aut\",
-    \"project_id\": 6,
-    \"user_id\": 20
+    \"title\": \"aut\",
+    \"description\": \"eos\",
+    \"project_id\": 13,
+    \"user_id\": 1
 }"
 </code></pre></div>
 
@@ -1413,10 +1413,10 @@ const headers = {
 };
 
 let body = {
-    "title": "rerum",
-    "description": "aut",
-    "project_id": 6,
-    "user_id": 20
+    "title": "aut",
+    "description": "eos",
+    "project_id": 13,
+    "user_id": 1
 };
 
 fetch(url, {
@@ -1501,7 +1501,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-tasks"
-               value="rerum"
+               value="aut"
                data-component="body" hidden>
     <br>
 
@@ -1513,7 +1513,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-tasks"
-               value="aut"
+               value="eos"
                data-component="body" hidden>
     <br>
 
@@ -1525,7 +1525,7 @@ fetch(url, {
                 <input type="number"
                name="project_id"
                data-endpoint="POSTapi-tasks"
-               value="6"
+               value="13"
                data-component="body" hidden>
     <br>
 <p>The id of the project which the task belong to.</p>
@@ -1537,7 +1537,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="POSTapi-tasks"
-               value="20"
+               value="1"
                data-component="body" hidden>
     <br>
 <p>The id of the user assigned to this task.</p>
@@ -1666,7 +1666,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tasks/11" \
+    --get "http://localhost/api/tasks/2" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1674,7 +1674,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/11"
+    "http://localhost/api/tasks/2"
 );
 
 const headers = {
@@ -1762,7 +1762,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-tasks--id-"
-               value="11"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>The id of the task to be gotten.</p>
@@ -1783,24 +1783,24 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/tasks/11" \
+    "http://localhost/api/tasks/13" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"maxime\",
-    \"description\": \"minima\",
-    \"project_id\": 4,
-    \"user_id\": 16,
-    \"detail\": \"iure\",
-    \"done\": false
+    \"title\": \"quod\",
+    \"description\": \"quo\",
+    \"project_id\": 18,
+    \"user_id\": 11,
+    \"detail\": \"veritatis\",
+    \"done\": true
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/11"
+    "http://localhost/api/tasks/13"
 );
 
 const headers = {
@@ -1810,12 +1810,12 @@ const headers = {
 };
 
 let body = {
-    "title": "maxime",
-    "description": "minima",
-    "project_id": 4,
-    "user_id": 16,
-    "detail": "iure",
-    "done": false
+    "title": "quod",
+    "description": "quo",
+    "project_id": 18,
+    "user_id": 11,
+    "detail": "veritatis",
+    "done": true
 };
 
 fetch(url, {
@@ -1904,7 +1904,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-tasks--id-"
-               value="11"
+               value="13"
                data-component="url" hidden>
     <br>
 <p>The id of the task to be updated.</p>
@@ -1917,7 +1917,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="PUTapi-tasks--id-"
-               value="maxime"
+               value="quod"
                data-component="body" hidden>
     <br>
 
@@ -1929,7 +1929,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="PUTapi-tasks--id-"
-               value="minima"
+               value="quo"
                data-component="body" hidden>
     <br>
 
@@ -1941,7 +1941,7 @@ fetch(url, {
                 <input type="number"
                name="project_id"
                data-endpoint="PUTapi-tasks--id-"
-               value="4"
+               value="18"
                data-component="body" hidden>
     <br>
 <p>The id of the project which the task belong to.</p>
@@ -1953,7 +1953,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="PUTapi-tasks--id-"
-               value="16"
+               value="11"
                data-component="body" hidden>
     <br>
 <p>The id of the user assigned to this task.</p>
@@ -1965,7 +1965,7 @@ fetch(url, {
                 <input type="text"
                name="detail"
                data-endpoint="PUTapi-tasks--id-"
-               value="iure"
+               value="veritatis"
                data-component="body" hidden>
     <br>
 
@@ -2009,7 +2009,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/tasks/7" \
+    "http://localhost/api/tasks/4" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2017,7 +2017,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/7"
+    "http://localhost/api/tasks/4"
 );
 
 const headers = {
@@ -2095,7 +2095,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-tasks--id-"
-               value="7"
+               value="4"
                data-component="url" hidden>
     <br>
 <p>The id of the task to be deleted.</p>
@@ -2116,7 +2116,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tasks/12/assign_employee/5" \
+    --get "http://localhost/api/tasks/14/assign_employee/10" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2124,7 +2124,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/12/assign_employee/5"
+    "http://localhost/api/tasks/14/assign_employee/10"
 );
 
 const headers = {
@@ -2211,7 +2211,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-tasks--id--assign_employee--user_id-"
-               value="12"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The id of the task.</p>
@@ -2223,7 +2223,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="GETapi-tasks--id--assign_employee--user_id-"
-               value="5"
+               value="10"
                data-component="url" hidden>
     <br>
 <p>The id of the user to be assigned.</p>
@@ -2244,7 +2244,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tasks/7/no_employee" \
+    --get "http://localhost/api/tasks/14/no_employee" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2252,7 +2252,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/7/no_employee"
+    "http://localhost/api/tasks/14/no_employee"
 );
 
 const headers = {
@@ -2330,7 +2330,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-tasks--id--no_employee"
-               value="7"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The id of the task.</p>
@@ -2355,19 +2355,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/tasks/15/submit" \
+    "http://localhost/api/tasks/18/submit" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"detail\": \"recusandae\"
+    \"detail\": \"sint\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/15/submit"
+    "http://localhost/api/tasks/18/submit"
 );
 
 const headers = {
@@ -2377,7 +2377,7 @@ const headers = {
 };
 
 let body = {
-    "detail": "recusandae"
+    "detail": "sint"
 };
 
 fetch(url, {
@@ -2459,7 +2459,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="POSTapi-tasks--id--submit"
-               value="15"
+               value="18"
                data-component="url" hidden>
     <br>
 <p>The id of the task to be submitted.</p>
@@ -2472,7 +2472,7 @@ fetch(url, {
                 <input type="text"
                name="detail"
                data-endpoint="POSTapi-tasks--id--submit"
-               value="recusandae"
+               value="sint"
                data-component="body" hidden>
     <br>
 
@@ -2795,7 +2795,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tasks/4/users" \
+    --get "http://localhost/api/tasks/19/users" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2803,7 +2803,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/4/users"
+    "http://localhost/api/tasks/19/users"
 );
 
 const headers = {
@@ -2891,7 +2891,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-tasks--id--users"
-               value="4"
+               value="19"
                data-component="url" hidden>
     <br>
 <p>number The id of the task the user want to get.</p>

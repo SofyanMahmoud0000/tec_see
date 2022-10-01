@@ -87,11 +87,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: odio
+                  example: enim
                 password:
                   type: string
                   description: ''
-                  example: aut
+                  example: aliquam
               required:
                 - email
                 - password
@@ -172,19 +172,19 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: numquam
+                  example: ea
                 email:
                   type: string
                   description: ''
-                  example: ut
+                  example: atque
                 password:
                   type: string
                   description: ''
-                  example: eos
+                  example: ad
                 password_confirmation:
                   type: string
                   description: 'Enter the password again to confirm it'
-                  example: officiis
+                  example: vitae
               required:
                 - name
                 - email
@@ -303,11 +303,11 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: in
+                  example: molestiae
                 description:
                   type: string.
                   description: ''
-                  example: atque
+                  example: et
               required:
                 - title
     get:
@@ -501,11 +501,11 @@ paths:
                 title:
                   type: string.
                   description: ''
-                  example: est
+                  example: voluptatem
                 description:
                   type: string.
                   description: ''
-                  example: facere
+                  example: eligendi
     delete:
       summary: 'Delete a project'
       description: 'This endpoint enable the admin to delete a project with specific id'
@@ -563,7 +563,7 @@ paths:
         in: path
         name: id
         description: 'The id of the project to be gotten.'
-        example: 11
+        example: 2
         required: true
         schema:
           type: integer
@@ -690,7 +690,7 @@ paths:
         in: path
         name: id
         description: 'number The id of the project the user want to get.'
-        example: 11
+        example: 20
         required: true
         schema:
           type: integer
@@ -775,19 +775,19 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: rerum
+                  example: aut
                 description:
                   type: string.
                   description: ''
-                  example: aut
+                  example: eos
                 project_id:
                   type: integer
                   description: 'The id of the project which the task belong to.'
-                  example: 6
+                  example: 13
                 user_id:
                   type: integer
                   description: 'The id of the user assigned to this task.'
-                  example: 20
+                  example: 1
               required:
                 - title
                 - project_id
@@ -1027,27 +1027,27 @@ paths:
                 title:
                   type: string.
                   description: ''
-                  example: maxime
+                  example: quod
                 description:
                   type: string.
                   description: ''
-                  example: minima
+                  example: quo
                 project_id:
                   type: integer
                   description: 'The id of the project which the task belong to.'
-                  example: 4
+                  example: 18
                 user_id:
                   type: integer
                   description: 'The id of the user assigned to this task.'
-                  example: 16
+                  example: 11
                 detail:
                   type: string
                   description: ''
-                  example: iure
+                  example: veritatis
                 done:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
     delete:
       summary: 'Delete a task'
       description: 'This endpoint enable the admin to delete a task with specific id'
@@ -1105,7 +1105,7 @@ paths:
         in: path
         name: id
         description: 'The id of the task to be gotten.'
-        example: 11
+        example: 2
         required: true
         schema:
           type: integer
@@ -1167,7 +1167,7 @@ paths:
         in: path
         name: id
         description: 'The id of the task.'
-        example: 12
+        example: 14
         required: true
         schema:
           type: integer
@@ -1175,7 +1175,7 @@ paths:
         in: path
         name: user_id
         description: 'The id of the user to be assigned.'
-        example: 5
+        example: 10
         required: true
         schema:
           type: integer
@@ -1237,7 +1237,7 @@ paths:
         in: path
         name: id
         description: 'The id of the task.'
-        example: 7
+        example: 14
         required: true
         schema:
           type: integer
@@ -1316,13 +1316,13 @@ paths:
                 detail:
                   type: string
                   description: ''
-                  example: recusandae
+                  example: sint
     parameters:
       -
         in: path
         name: id
         description: 'The id of the task to be submitted.'
-        example: 15
+        example: 18
         required: true
         schema:
           type: integer
@@ -1611,7 +1611,7 @@ paths:
         in: path
         name: id
         description: 'number The id of the task the user want to get.'
-        example: 4
+        example: 19
         required: true
         schema:
           type: integer
