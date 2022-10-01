@@ -1,6 +1,6 @@
 Tec_see
 =============
-In this repo, I have created an API for Tec-see as an assessment
+In this repo, I have created an API for Tec-see as an assessment.
 The system has two types of users (user, admin), each one has its own functions, like the following
 
 * Admin(Supervisor)
@@ -86,7 +86,7 @@ And you can get the postman collection for the API from [here](https://github.co
     ```bash
     php artisan db:seed
     ```
-    
+
 8. Generate secret key of the jwt
     ```bash
     php artisan jwt:secret
