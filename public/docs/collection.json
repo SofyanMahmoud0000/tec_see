@@ -9,8 +9,8 @@
         }
     ],
     "info": {
-        "name": "Tec-see documentation",
-        "_postman_id": "da3dd677-ed2c-41fa-8054-52489278c662",
+        "name": "Tec-see APIs documentation",
+        "_postman_id": "d4724eef-f00e-40ae-9da1-d7e2a4b2e846",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"qui\",\"password\":\"velit\"}"
+                            "raw": "{\"email\":\"odio\",\"password\":\"aut\"}"
                         },
                         "description": "This endpoint enable the admin or the user to login",
                         "auth": {
@@ -91,7 +91,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"occaecati\",\"email\":\"porro\",\"password\":\"et\",\"password_confirmation\":\"rerum\"}"
+                            "raw": "{\"name\":\"numquam\",\"email\":\"ut\",\"password\":\"eos\",\"password_confirmation\":\"officiis\"}"
                         },
                         "description": "This endpoint enable the admin or the user to register",
                         "auth": {
@@ -151,11 +151,11 @@
             ]
         },
         {
-            "name": "Project",
+            "name": "Projects for admins",
             "description": "\nAPIs for projects",
             "item": [
                 {
-                    "name": "Create a new project",
+                    "name": "Create a project",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -176,7 +176,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"velit\",\"description\":\"molestiae\"}"
+                            "raw": "{\"title\":\"in\",\"description\":\"atque\"}"
                         },
                         "description": "This endpoint enable the admin to create new project"
                     },
@@ -196,7 +196,7 @@
                     ]
                 },
                 {
-                    "name": "List the projects",
+                    "name": "Get all projects",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -228,7 +228,7 @@
                     ]
                 },
                 {
-                    "name": "Get a project",
+                    "name": "Get a specific project",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -239,7 +239,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "7",
+                                    "value": "11",
                                     "description": "The id of the project to be gotten."
                                 }
                             ]
@@ -285,7 +285,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "2",
+                                    "value": "9",
                                     "description": "The id of the project to be updated."
                                 }
                             ]
@@ -303,7 +303,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"quaerat\",\"description\":\"inventore\"}"
+                            "raw": "{\"title\":\"est\",\"description\":\"facere\"}"
                         },
                         "description": "This endpoint enable the admin to update a project"
                     },
@@ -334,7 +334,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "12",
+                                    "value": "3",
                                     "description": "The id of the project to be deleted."
                                 }
                             ]
@@ -371,27 +371,19 @@
             ]
         },
         {
-            "name": "Task",
-            "description": "\nAPIs for tasks",
+            "name": "Projects for users",
+            "description": "This endpoint returns all the user's projects",
             "item": [
                 {
-                    "name": "Submit a task",
+                    "name": "Get all projects",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/tasks\/:id\/submit",
+                            "path": "api\/projects\/users",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/tasks\/:id\/submit",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "13",
-                                    "description": "The id of the task to be submitted."
-                                }
-                            ]
+                            "raw": "{{baseUrl}}\/api\/projects\/users"
                         },
-                        "method": "POST",
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -402,35 +394,72 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"detail\":\"ut\",\"done\":true}"
-                        },
-                        "description": "This endpoint enable the user to submit a task"
+                        "body": null,
+                        "description": ""
                     },
                     "response": [
                         {
                             "header": [],
-                            "code": 201,
-                            "body": "{\n   \"message\": \"The task has been submitted successfully\"\n}",
-                            "name": ""
-                        },
-                        {
-                            "header": [],
-                            "code": 400,
-                            "body": "{\n   \"errors\": \"The task is already submitted\"\n}",
-                            "name": ""
-                        },
-                        {
-                            "header": [],
-                            "code": 403,
-                            "body": "{\n   \"errors\": \"You are not assigned to this task\"\n}",
+                            "code": 200,
+                            "body": "{\n \"projects\": [\n   {\n       \"id\": 1,\n       \"title\": \"Test project\",\n       \"description\": \"new description\",\n       \"created_at\": \"2022-09-29 15:04:27\",\n       \"updated_at\": \"2022-09-29 15:04:27\"\n   }\n ]\n}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Create a new task",
+                    "name": "Get a specific project",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/projects\/:id\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/projects\/:id\/users",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "11",
+                                    "description": "number The id of the project the user want to get."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"project\": {\n   \"id\": 1,\n   \"title\": \"Test project\",\n   \"description\": \"new description\",\n   \"created_at\": \"2022-09-29 15:04:27\",\n   \"updated_at\": \"2022-09-29 15:04:27\"\n }\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n   \"errors\": \"This project doesn't belong to you\"\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Tasks for admins",
+            "description": "\nAPIs for tasks",
+            "item": [
+                {
+                    "name": "Create a task",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -451,7 +480,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ea\",\"description\":\"blanditiis\",\"project_id\":5,\"user_id\":17}"
+                            "raw": "{\"title\":\"rerum\",\"description\":\"aut\",\"project_id\":6,\"user_id\":20}"
                         },
                         "description": "This endpoint enable the admin to create new task"
                     },
@@ -471,7 +500,7 @@
                     ]
                 },
                 {
-                    "name": "List the tasks",
+                    "name": "Get all tasks",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -503,7 +532,7 @@
                     ]
                 },
                 {
-                    "name": "Get a task",
+                    "name": "Get a specific task",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -514,7 +543,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "14",
+                                    "value": "11",
                                     "description": "The id of the task to be gotten."
                                 }
                             ]
@@ -560,7 +589,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "12",
+                                    "value": "11",
                                     "description": "The id of the task to be updated."
                                 }
                             ]
@@ -578,7 +607,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"hic\",\"description\":\"recusandae\",\"project_id\":4,\"user_id\":9,\"detail\":\"dolore\",\"done\":false}"
+                            "raw": "{\"title\":\"maxime\",\"description\":\"minima\",\"project_id\":4,\"user_id\":16,\"detail\":\"iure\",\"done\":false}"
                         },
                         "description": "This endpoint enable the admin to update a task"
                     },
@@ -615,7 +644,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "2",
+                                    "value": "7",
                                     "description": "The id of the task to be deleted."
                                 }
                             ]
@@ -661,13 +690,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "14",
+                                    "value": "12",
                                     "description": "The id of the task."
                                 },
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "19",
+                                    "value": "5",
                                     "description": "The id of the user to be assigned."
                                 }
                             ]
@@ -719,7 +748,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "13",
+                                    "value": "7",
                                     "description": "The id of the task."
                                 }
                             ]
@@ -756,59 +785,27 @@
             ]
         },
         {
-            "name": "User",
-            "description": "\nAPIs for users",
+            "name": "Tasks for users",
+            "description": "This endpoint enable the user to submit a task",
             "item": [
                 {
-                    "name": "Get all projects",
+                    "name": "Submit a task",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/projects\/users",
+                            "path": "api\/tasks\/:id\/submit",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/projects\/users"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "This endpoint returns all the user's projects"
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\n \"projects\": [\n   {\n       \"id\": 1,\n       \"title\": \"Test project\",\n       \"description\": \"new description\",\n       \"created_at\": \"2022-09-29 15:04:27\",\n       \"updated_at\": \"2022-09-29 15:04:27\"\n   }\n ]\n}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Get specific project",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/projects\/:id\/users",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/projects\/:id\/users",
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id\/submit",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "16",
-                                    "description": "number The id of the project the user want to get."
+                                    "value": "15",
+                                    "description": "The id of the task to be submitted."
                                 }
                             ]
                         },
-                        "method": "GET",
+                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -819,20 +816,29 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
-                        "description": "This endpoint return the project with specific Id.\nThe user must be assigned to a task belongs to this project to be able to get access the project"
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"detail\":\"recusandae\"}"
+                        },
+                        "description": ""
                     },
                     "response": [
                         {
                             "header": [],
-                            "code": 200,
-                            "body": "{\n \"project\": {\n   \"id\": 1,\n   \"title\": \"Test project\",\n   \"description\": \"new description\",\n   \"created_at\": \"2022-09-29 15:04:27\",\n   \"updated_at\": \"2022-09-29 15:04:27\"\n }\n}",
+                            "code": 201,
+                            "body": "{\n   \"message\": \"The task has been submitted successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n   \"errors\": \"The task is already submitted\"\n}",
                             "name": ""
                         },
                         {
                             "header": [],
                             "code": 403,
-                            "body": "{\n   \"errors\": \"This project doesn't belong to you\"\n}",
+                            "body": "{\n   \"errors\": \"You are not assigned to this task\"\n}",
                             "name": ""
                         }
                     ]
@@ -858,7 +864,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "This endpoint returns all the user's tasks"
+                        "description": ""
                     },
                     "response": [
                         {
@@ -890,7 +896,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "This endpoint returns all the user's submitted tasks"
+                        "description": ""
                     },
                     "response": [
                         {
@@ -922,7 +928,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "This endpoint returns all the user's pending tasks"
+                        "description": ""
                     },
                     "response": [
                         {
@@ -934,7 +940,7 @@
                     ]
                 },
                 {
-                    "name": "Get specific task",
+                    "name": "Get a specific task",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -945,7 +951,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "6",
+                                    "value": "4",
                                     "description": "number The id of the task the user want to get."
                                 }
                             ]
@@ -962,7 +968,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "This endpoint return the task with specific Id.\nThe user must be assigned to this task to be able to get access the task"
+                        "description": ""
                     },
                     "response": [
                         {

@@ -1,0 +1,572 @@
+name: 'Tasks for admins'
+description: |-
+
+  APIs for tasks
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/tasks
+    metadata:
+      groupName: 'Tasks for admins'
+      groupDescription: |-
+
+        APIs for tasks
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create a task'
+      description: 'This endpoint enable the admin to create new task'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: rerum
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: aut
+        type: string.
+        custom: []
+      project_id:
+        name: project_id
+        description: 'The id of the project which the task belong to.'
+        required: true
+        example: 6
+        type: integer
+        custom: []
+      user_id:
+        name: user_id
+        description: 'The id of the user assigned to this task.'
+        required: true
+        example: 20
+        type: integer
+        custom: []
+    cleanBodyParameters:
+      title: rerum
+      description: aut
+      project_id: 6
+      user_id: 20
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+           "task": {
+             "title": "task 2",
+             "description": "description",
+             "project_id": "1",
+             "user_id": "11",
+             "updated_at": "2022-09-30T21:20:07.000000Z",
+             "created_at": "2022-09-30T21:20:07.000000Z",
+             "id": 2
+           }
+          }
+        headers: []
+        description: '201'
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+           "errors": {
+             "title": [
+                 "The title field is required."
+             ]
+           }
+          }
+        headers: []
+        description: '400'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer DcVaaP5hv63g1E6dk4eZ8bf'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/tasks
+    metadata:
+      groupName: 'Tasks for admins'
+      groupDescription: |-
+
+        APIs for tasks
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get all tasks'
+      description: 'This endpoint enable the admin to get all tasks'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+           "tasks": [
+             {
+                 "id": 2,
+                 "title": "task 2",
+                 "description": "description",
+                 "detail": null,
+                 "done": 0,
+                 "project_id": 1,
+                 "user_id": 11,
+                 "created_at": "2022-09-30T21:20:07.000000Z",
+                 "updated_at": "2022-09-30T21:20:07.000000Z"
+             },
+             {
+                 "id": 3,
+                 "title": "task 33",
+                 "description": "description",
+                 "detail": null,
+                 "done": 0,
+                 "project_id": 1,
+                 "user_id": 11,
+                 "created_at": "2022-09-30T21:25:30.000000Z",
+                 "updated_at": "2022-09-30T21:30:18.000000Z"
+             }
+           ]
+          }
+        headers: []
+        description: '200'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer f5gVe3dP6a4kD6Each8bZv1'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/tasks/{id}'
+    metadata:
+      groupName: 'Tasks for admins'
+      groupDescription: |-
+
+        APIs for tasks
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get a specific task'
+      description: 'This endpoint enable the admin to get a task with specific id'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The id of the task to be gotten.'
+        required: true
+        example: 11
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 11
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+           "task": {
+             "id": 3,
+             "title": "task 33",
+             "description": "description",
+             "detail": null,
+             "done": 0,
+             "project_id": 1,
+             "user_id": 11,
+             "created_at": "2022-09-30T21:25:30.000000Z",
+             "updated_at": "2022-09-30T21:30:18.000000Z"
+           }
+          }
+        headers: []
+        description: '200'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+             "errors": "This task doesn't exist"
+          }
+        headers: []
+        description: '404'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Z8634aefb6daDcgEvhVP15k'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/tasks/{id}'
+    metadata:
+      groupName: 'Tasks for admins'
+      groupDescription: |-
+
+        APIs for tasks
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update a task'
+      description: 'This endpoint enable the admin to update a task'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The id of the task to be updated.'
+        required: true
+        example: 11
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 11
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: false
+        example: maxime
+        type: string.
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: minima
+        type: string.
+        custom: []
+      project_id:
+        name: project_id
+        description: 'The id of the project which the task belong to.'
+        required: false
+        example: 4
+        type: integer
+        custom: []
+      user_id:
+        name: user_id
+        description: 'The id of the user assigned to this task.'
+        required: false
+        example: 16
+        type: integer
+        custom: []
+      detail:
+        name: detail
+        description: ''
+        required: false
+        example: iure
+        type: string
+        custom: []
+      done:
+        name: done
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        custom: []
+    cleanBodyParameters:
+      title: maxime
+      description: minima
+      project_id: 4
+      user_id: 16
+      detail: iure
+      done: false
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+             "message": "The task has been updated successfully"
+          }
+        headers: []
+        description: '201'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+             "errors": "This task doesn't exist"
+          }
+        headers: []
+        description: '404'
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+           "errors": {
+             "done": [
+                 "The done field must be true or false."
+             ],
+             "project_id": [
+                 "The selected project id is invalid."
+             ]
+           }
+          }
+        headers: []
+        description: '400'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 5hbPkV4fead6D3a1vZE86cg'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/tasks/{id}'
+    metadata:
+      groupName: 'Tasks for admins'
+      groupDescription: |-
+
+        APIs for tasks
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete a task'
+      description: 'This endpoint enable the admin to delete a task with specific id'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The id of the task to be deleted.'
+        required: true
+        example: 7
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 7
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+             "message": "The task has been deleted successfully"
+          }
+        headers: []
+        description: '200'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+             "errors": "This task doesn't exist"
+          }
+        headers: []
+        description: '404'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Pbf646d1DeEgV5avkac3h8Z'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/tasks/{id}/assign_employee/{user_id}'
+    metadata:
+      groupName: 'Tasks for admins'
+      groupDescription: |-
+
+        APIs for tasks
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Assign user for a task'
+      description: 'This endpoint enable the admin to assign a user for a task'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The id of the task.'
+        required: true
+        example: 12
+        type: integer
+        custom: []
+      user_id:
+        name: user_id
+        description: 'The id of the user to be assigned.'
+        required: true
+        example: 5
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 12
+      user_id: 5
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+             "message": "The task has been submitted to Sofyan successfully"
+          }
+        headers: []
+        description: '201'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+             "errors": "This user doesn't exist"
+          }
+        headers: []
+        description: '404'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+             "errors": "This task doesn't exist"
+          }
+        headers: []
+        description: '404'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer c3ahf8EVv6baZP6eg51dD4k'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/tasks/{id}/no_employee'
+    metadata:
+      groupName: 'Tasks for admins'
+      groupDescription: |-
+
+        APIs for tasks
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove assigned user from a task'
+      description: 'This endpoint enable the admin to remove the assigned user from a task'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The id of the task.'
+        required: true
+        example: 7
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 7
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+             "message": "There is no user assigned to this task now"
+          }
+        headers: []
+        description: '201'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+             "errors": "This task doesn't exist"
+          }
+        headers: []
+        description: '404'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6E5vhcPg4af8e1ZDb6a3Vkd'
+    controller: null
+    method: null
+    route: null
+    custom: []

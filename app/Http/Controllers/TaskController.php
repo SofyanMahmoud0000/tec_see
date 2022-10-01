@@ -9,14 +9,14 @@ use App\Models\Task;
 use App\Models\User;
 
 /**
- * @group Task
+ * @group Tasks for admins
  *
  * APIs for tasks
  */
 class TaskController extends Controller
 {
   /**
-   * Create a new task
+   * Create a task
    * 
    * This endpoint enable the admin to create new task
    * 
@@ -105,8 +105,8 @@ class TaskController extends Controller
    * @urlParam id int required The id of the task to be updated.
    * @bodyParam title string.
    * @bodyParam description string.
-   * @bodyParam project_id int required The id of the project which the task belong to. 
-   * @bodyParam user_id int required The id of the user assigned to this task.
+   * @bodyParam project_id int The id of the project which the task belong to. 
+   * @bodyParam user_id int The id of the user assigned to this task.
    * @bodyParam detail string 
    * @bodyParam done boolean
    * 
@@ -156,7 +156,7 @@ class TaskController extends Controller
   }
 
   /**
-   * Get a task
+   * Get a specific task
    * 
    * This endpoint enable the admin to get a task with specific id
    * 
@@ -191,7 +191,7 @@ class TaskController extends Controller
   }
 
   /**
-   * List the tasks
+   * Get all tasks
    * 
    * This endpoint enable the admin to get all tasks
    * 
@@ -234,6 +234,8 @@ class TaskController extends Controller
 
   /**
    * Submit a task
+   * 
+   * @group Tasks for users
    * 
    * This endpoint enable the user to submit a task
    * 

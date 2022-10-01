@@ -32,19 +32,19 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: qui
+        example: odio
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: velit
+        example: aut
         type: string
         custom: []
     cleanBodyParameters:
-      email: qui
-      password: velit
+      email: odio
+      password: aut
     fileParameters: []
     responses:
       -
@@ -112,35 +112,35 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: occaecati
+        example: numquam
         type: string
         custom: []
       email:
         name: email
         description: ''
         required: true
-        example: porro
+        example: ut
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: et
+        example: eos
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'Enter the password again to confirm it'
         required: true
-        example: rerum
+        example: officiis
         type: string
         custom: []
     cleanBodyParameters:
-      name: occaecati
-      email: porro
-      password: et
-      password_confirmation: rerum
+      name: numquam
+      email: ut
+      password: eos
+      password_confirmation: officiis
     fileParameters: []
     responses:
       -

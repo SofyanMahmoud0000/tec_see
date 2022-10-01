@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: 'Tec-see documentation'
+  title: 'Tec-see APIs documentation'
   description: ''
   version: 1.0.0
 servers:
@@ -87,11 +87,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: qui
+                  example: odio
                 password:
                   type: string
                   description: ''
-                  example: velit
+                  example: aut
               required:
                 - email
                 - password
@@ -172,19 +172,19 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: occaecati
+                  example: numquam
                 email:
                   type: string
                   description: ''
-                  example: porro
+                  example: ut
                 password:
                   type: string
                   description: ''
-                  example: et
+                  example: eos
                 password_confirmation:
                   type: string
                   description: 'Enter the password again to confirm it'
-                  example: rerum
+                  example: officiis
               required:
                 - name
                 - email
@@ -228,7 +228,7 @@ paths:
       security: []
   /api/projects:
     post:
-      summary: 'Create a new project'
+      summary: 'Create a project'
       description: 'This endpoint enable the admin to create new project'
       parameters:
         -
@@ -292,7 +292,7 @@ paths:
                       title:
                         - 'The title field is required.'
       tags:
-        - Project
+        - 'Projects for admins'
       requestBody:
         required: true
         content:
@@ -303,15 +303,15 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: velit
+                  example: in
                 description:
                   type: string.
                   description: ''
-                  example: molestiae
+                  example: atque
               required:
                 - title
     get:
-      summary: 'List the projects'
+      summary: 'Get all projects'
       description: 'This endpoint enable the admin to get all projects'
       parameters:
         -
@@ -375,10 +375,10 @@ paths:
                     items:
                       type: object
       tags:
-        - Project
+        - 'Projects for admins'
   '/api/projects/{id}':
     get:
-      summary: 'Get a project'
+      summary: 'Get a specific project'
       description: 'This endpoint enable the admin to get a project with specific id'
       parameters:
         -
@@ -438,7 +438,7 @@ paths:
                     type: string
                     example: 'This project doesn''t exist'
       tags:
-        - Project
+        - 'Projects for admins'
     put:
       summary: 'Update a project'
       description: 'This endpoint enable the admin to update a project'
@@ -490,7 +490,7 @@ paths:
                     type: string
                     example: 'This project doesn''t exist'
       tags:
-        - Project
+        - 'Projects for admins'
       requestBody:
         required: false
         content:
@@ -501,11 +501,11 @@ paths:
                 title:
                   type: string.
                   description: ''
-                  example: quaerat
+                  example: est
                 description:
                   type: string.
                   description: ''
-                  example: inventore
+                  example: facere
     delete:
       summary: 'Delete a project'
       description: 'This endpoint enable the admin to delete a project with specific id'
@@ -557,20 +557,20 @@ paths:
                     type: string
                     example: 'This project doesn''t exist'
       tags:
-        - Project
+        - 'Projects for admins'
     parameters:
       -
         in: path
         name: id
         description: 'The id of the project to be gotten.'
-        example: 7
+        example: 11
         required: true
         schema:
           type: integer
-  '/api/tasks/{id}/submit':
-    post:
-      summary: 'Submit a task'
-      description: 'This endpoint enable the user to submit a task'
+  /api/projects/users:
+    get:
+      summary: 'Get all projects'
+      description: ''
       parameters:
         -
           in: header
@@ -594,30 +594,83 @@ paths:
           schema:
             type: string
       responses:
-        201:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'The task has been submitted successfully'
+                  projects:
+                    -
+                      id: 1
+                      title: 'Test project'
+                      description: 'new description'
+                      created_at: '2022-09-29 15:04:27'
+                      updated_at: '2022-09-29 15:04:27'
                 properties:
-                  message:
-                    type: string
-                    example: 'The task has been submitted successfully'
-        400:
+                  projects:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Test project'
+                        description: 'new description'
+                        created_at: '2022-09-29 15:04:27'
+                        updated_at: '2022-09-29 15:04:27'
+                    items:
+                      type: object
+      tags:
+        - 'Projects for users'
+  '/api/projects/{id}/users':
+    get:
+      summary: 'Get a specific project'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  errors: 'The task is already submitted'
+                  project:
+                    id: 1
+                    title: 'Test project'
+                    description: 'new description'
+                    created_at: '2022-09-29 15:04:27'
+                    updated_at: '2022-09-29 15:04:27'
                 properties:
-                  errors:
-                    type: string
-                    example: 'The task is already submitted'
+                  project:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'Test project'
+                      description: 'new description'
+                      created_at: '2022-09-29 15:04:27'
+                      updated_at: '2022-09-29 15:04:27'
         403:
           description: ''
           content:
@@ -625,42 +678,25 @@ paths:
               schema:
                 type: object
                 example:
-                  errors: 'You are not assigned to this task'
+                  errors: 'This project doesn''t belong to you'
                 properties:
                   errors:
                     type: string
-                    example: 'You are not assigned to this task'
+                    example: 'This project doesn''t belong to you'
       tags:
-        - Task
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                detail:
-                  type: string
-                  description: ''
-                  example: ut
-                done:
-                  type: boolean
-                  description: ''
-                  example: true
-              required:
-                - done
+        - 'Projects for users'
     parameters:
       -
         in: path
         name: id
-        description: 'The id of the task to be submitted.'
-        example: 13
+        description: 'number The id of the project the user want to get.'
+        example: 11
         required: true
         schema:
           type: integer
   /api/tasks:
     post:
-      summary: 'Create a new task'
+      summary: 'Create a task'
       description: 'This endpoint enable the admin to create new task'
       parameters:
         -
@@ -728,7 +764,7 @@ paths:
                       title:
                         - 'The title field is required.'
       tags:
-        - Task
+        - 'Tasks for admins'
       requestBody:
         required: true
         content:
@@ -739,25 +775,25 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: ea
+                  example: rerum
                 description:
                   type: string.
                   description: ''
-                  example: blanditiis
+                  example: aut
                 project_id:
                   type: integer
                   description: 'The id of the project which the task belong to.'
-                  example: 5
+                  example: 6
                 user_id:
                   type: integer
                   description: 'The id of the user assigned to this task.'
-                  example: 17
+                  example: 20
               required:
                 - title
                 - project_id
                 - user_id
     get:
-      summary: 'List the tasks'
+      summary: 'Get all tasks'
       description: 'This endpoint enable the admin to get all tasks'
       parameters:
         -
@@ -837,10 +873,10 @@ paths:
                     items:
                       type: object
       tags:
-        - Task
+        - 'Tasks for admins'
   '/api/tasks/{id}':
     get:
-      summary: 'Get a task'
+      summary: 'Get a specific task'
       description: 'This endpoint enable the admin to get a task with specific id'
       parameters:
         -
@@ -908,7 +944,7 @@ paths:
                     type: string
                     example: 'This task doesn''t exist'
       tags:
-        - Task
+        - 'Tasks for admins'
     put:
       summary: 'Update a task'
       description: 'This endpoint enable the admin to update a task'
@@ -980,9 +1016,9 @@ paths:
                       project_id:
                         - 'The selected project id is invalid.'
       tags:
-        - Task
+        - 'Tasks for admins'
       requestBody:
-        required: true
+        required: false
         content:
           application/json:
             schema:
@@ -991,11 +1027,11 @@ paths:
                 title:
                   type: string.
                   description: ''
-                  example: hic
+                  example: maxime
                 description:
                   type: string.
                   description: ''
-                  example: recusandae
+                  example: minima
                 project_id:
                   type: integer
                   description: 'The id of the project which the task belong to.'
@@ -1003,18 +1039,15 @@ paths:
                 user_id:
                   type: integer
                   description: 'The id of the user assigned to this task.'
-                  example: 9
+                  example: 16
                 detail:
                   type: string
                   description: ''
-                  example: dolore
+                  example: iure
                 done:
                   type: boolean
                   description: ''
                   example: false
-              required:
-                - project_id
-                - user_id
     delete:
       summary: 'Delete a task'
       description: 'This endpoint enable the admin to delete a task with specific id'
@@ -1066,13 +1099,13 @@ paths:
                     type: string
                     example: 'This task doesn''t exist'
       tags:
-        - Task
+        - 'Tasks for admins'
     parameters:
       -
         in: path
         name: id
         description: 'The id of the task to be gotten.'
-        example: 14
+        example: 11
         required: true
         schema:
           type: integer
@@ -1128,13 +1161,13 @@ paths:
                     type: string
                     example: 'This task doesn''t exist'
       tags:
-        - Task
+        - 'Tasks for admins'
     parameters:
       -
         in: path
         name: id
         description: 'The id of the task.'
-        example: 14
+        example: 12
         required: true
         schema:
           type: integer
@@ -1142,7 +1175,7 @@ paths:
         in: path
         name: user_id
         description: 'The id of the user to be assigned.'
-        example: 19
+        example: 5
         required: true
         schema:
           type: integer
@@ -1198,20 +1231,20 @@ paths:
                     type: string
                     example: 'This task doesn''t exist'
       tags:
-        - Task
+        - 'Tasks for admins'
     parameters:
       -
         in: path
         name: id
         description: 'The id of the task.'
-        example: 13
+        example: 7
         required: true
         schema:
           type: integer
-  /api/projects/users:
-    get:
-      summary: 'Get all projects'
-      description: 'This endpoint returns all the user''s projects'
+  '/api/tasks/{id}/submit':
+    post:
+      summary: 'Submit a task'
+      description: ''
       parameters:
         -
           in: header
@@ -1235,83 +1268,30 @@ paths:
           schema:
             type: string
       responses:
-        200:
+        201:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  projects:
-                    -
-                      id: 1
-                      title: 'Test project'
-                      description: 'new description'
-                      created_at: '2022-09-29 15:04:27'
-                      updated_at: '2022-09-29 15:04:27'
+                  message: 'The task has been submitted successfully'
                 properties:
-                  projects:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        title: 'Test project'
-                        description: 'new description'
-                        created_at: '2022-09-29 15:04:27'
-                        updated_at: '2022-09-29 15:04:27'
-                    items:
-                      type: object
-      tags:
-        - User
-  '/api/projects/{id}/users':
-    get:
-      summary: 'Get specific project'
-      description: "This endpoint return the project with specific Id.\nThe user must be assigned to a task belongs to this project to be able to get access the project"
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer {YOUR_AUTH_KEY}'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
+                  message:
+                    type: string
+                    example: 'The task has been submitted successfully'
+        400:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  project:
-                    id: 1
-                    title: 'Test project'
-                    description: 'new description'
-                    created_at: '2022-09-29 15:04:27'
-                    updated_at: '2022-09-29 15:04:27'
+                  errors: 'The task is already submitted'
                 properties:
-                  project:
-                    type: object
-                    example:
-                      id: 1
-                      title: 'Test project'
-                      description: 'new description'
-                      created_at: '2022-09-29 15:04:27'
-                      updated_at: '2022-09-29 15:04:27'
+                  errors:
+                    type: string
+                    example: 'The task is already submitted'
         403:
           description: ''
           content:
@@ -1319,26 +1299,37 @@ paths:
               schema:
                 type: object
                 example:
-                  errors: 'This project doesn''t belong to you'
+                  errors: 'You are not assigned to this task'
                 properties:
                   errors:
                     type: string
-                    example: 'This project doesn''t belong to you'
+                    example: 'You are not assigned to this task'
       tags:
-        - User
+        - 'Tasks for users'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                detail:
+                  type: string
+                  description: ''
+                  example: recusandae
     parameters:
       -
         in: path
         name: id
-        description: 'number The id of the project the user want to get.'
-        example: 16
+        description: 'The id of the task to be submitted.'
+        example: 15
         required: true
         schema:
           type: integer
   /api/tasks/users:
     get:
       summary: 'Get all tasks'
-      description: 'This endpoint returns all the user''s tasks'
+      description: ''
       parameters:
         -
           in: header
@@ -1417,11 +1408,11 @@ paths:
                     items:
                       type: object
       tags:
-        - User
+        - 'Tasks for users'
   /api/tasks/submitted/users:
     get:
       summary: 'Get all submitted tasks'
-      description: 'This endpoint returns all the user''s submitted tasks'
+      description: ''
       parameters:
         -
           in: header
@@ -1480,11 +1471,11 @@ paths:
                     items:
                       type: object
       tags:
-        - User
+        - 'Tasks for users'
   /api/tasks/pending/users:
     get:
       summary: 'Get all pending tasks'
-      description: 'This endpoint returns all the user''s pending tasks'
+      description: ''
       parameters:
         -
           in: header
@@ -1543,11 +1534,11 @@ paths:
                     items:
                       type: object
       tags:
-        - User
+        - 'Tasks for users'
   '/api/tasks/{id}/users':
     get:
-      summary: 'Get specific task'
-      description: "This endpoint return the task with specific Id.\nThe user must be assigned to this task to be able to get access the task"
+      summary: 'Get a specific task'
+      description: ''
       parameters:
         -
           in: header
@@ -1614,13 +1605,13 @@ paths:
                     type: string
                     example: 'This task doesn''t belong to you'
       tags:
-        - User
+        - 'Tasks for users'
     parameters:
       -
         in: path
         name: id
         description: 'number The id of the task the user want to get.'
-        example: 6
+        example: 4
         required: true
         schema:
           type: integer
@@ -1629,14 +1620,17 @@ tags:
     name: Auth
     description: "\nAPIs for auth"
   -
-    name: Project
+    name: 'Projects for admins'
     description: "\nAPIs for projects"
   -
-    name: Task
+    name: 'Projects for users'
+    description: 'This endpoint returns all the user''s projects'
+  -
+    name: 'Tasks for admins'
     description: "\nAPIs for tasks"
   -
-    name: User
-    description: "\nAPIs for users"
+    name: 'Tasks for users'
+    description: 'This endpoint enable the user to submit a task'
 components:
   securitySchemes:
     default:

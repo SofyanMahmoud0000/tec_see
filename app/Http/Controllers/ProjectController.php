@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\Project;
 
 /**
- * @group Project
+ * @group Projects for admins
  *
  * APIs for projects
  */
 class ProjectController extends Controller
 {
   /**
-   * Create a new project
+   * Create a project
    * 
    * This endpoint enable the admin to create new project
    * 
@@ -131,7 +131,7 @@ class ProjectController extends Controller
   }
 
   /**
-   * Get a project
+   * Get a specific project
    * 
    * This endpoint enable the admin to get a project with specific id
    * 
@@ -162,7 +162,7 @@ class ProjectController extends Controller
   }
 
   /**
-   * List the projects
+   * Get all projects
    * 
    * This endpoint enable the admin to get all projects
    * 

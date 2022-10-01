@@ -5,15 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Task;
 
-/**
- * @group User
- *
- * APIs for users
- */
 class UserController extends Controller
 {
   /**
    * Get all tasks
+   * 
+   * @group Tasks for users
    * 
    * This endpoint returns all the user's tasks
    * 
@@ -55,6 +52,8 @@ class UserController extends Controller
   /**
    * Get all submitted tasks
    * 
+   * @group Tasks for users
+   * 
    * This endpoint returns all the user's submitted tasks
    * 
    * @authenticated
@@ -85,6 +84,8 @@ class UserController extends Controller
   /**
    * Get all pending tasks
    * 
+   * @group Tasks for users
+   * 
    * This endpoint returns all the user's pending tasks
    * 
    * @authenticated
@@ -112,7 +113,9 @@ class UserController extends Controller
   }
 
   /**
-   * Get specific task
+   * Get a specific task
+   * 
+   * @group Tasks for users
    * 
    * This endpoint return the task with specific Id.
    * The user must be assigned to this task to be able to get access the task
@@ -149,6 +152,8 @@ class UserController extends Controller
   /**
    * Get all projects
    * 
+   * @group Projects for users
+   * 
    * This endpoint returns all the user's projects
    * 
    * @authenticated
@@ -174,7 +179,9 @@ class UserController extends Controller
   }
 
   /**
-   * Get specific project
+   * Get a specific project
+   * 
+   * @group Projects for users
    * 
    * This endpoint return the project with specific Id.
    * The user must be assigned to a task belongs to this project to be able to get access the project

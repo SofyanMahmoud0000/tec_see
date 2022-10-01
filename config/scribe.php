@@ -9,7 +9,7 @@ return [
     /*
      * The HTML <title> for the generated documentation. If this is empty, Scribe will infer it from config('app.name').
      */
-    'title' => "Tec-see documentation",
+    'title' => "Tec-see APIs documentation",
 
     /*
      * A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
@@ -377,8 +377,6 @@ INTRO
             Strategies\UrlParameters\GetFromUrlParamTag::class,
         ],
         'queryParameters' => [
-            Strategies\QueryParameters\GetFromFormRequest::class,
-            Strategies\QueryParameters\GetFromInlineValidator::class,
             Strategies\QueryParameters\GetFromQueryParamAttribute::class,
             Strategies\QueryParameters\GetFromQueryParamTag::class,
         ],
@@ -388,8 +386,6 @@ INTRO
             Strategies\Headers\GetFromHeaderTag::class,
         ],
         'bodyParameters' => [
-            Strategies\BodyParameters\GetFromFormRequest::class,
-            Strategies\BodyParameters\GetFromInlineValidator::class,
             Strategies\BodyParameters\GetFromBodyParamAttribute::class,
             Strategies\BodyParameters\GetFromBodyParamTag::class,
         ],
