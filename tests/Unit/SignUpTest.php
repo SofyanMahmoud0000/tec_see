@@ -21,7 +21,7 @@ class SignUpTest extends TestCase
     {
 
         parent::setUp();
-        $this->random = rand(11, 11);
+        $this->random = rand(1, 1);
         $this->user = user::find($this->random);
         $this->registerPath = 'api/auth/register';
     }
