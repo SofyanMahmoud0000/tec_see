@@ -33,6 +33,20 @@ And you can get the postman collection for the API from [here](https://github.co
 
 ![Database schema](https://github.com/sofyanmahmoud0000/tec_see/blob/master/public/ReadmeImages/scheme.png)
 
+## Unit testing
+This app is provided with unit testing covers some test cases in login and signup units, and in the feature hope to add solid test cases cover all the units.
+You can run the test cases by the command
+```bash
+php artisan test --testsuite=Unit
+```
+
+The output will show the passed/failed test cases like that
+![Unit testing output](https://github.com/sofyanmahmoud0000/tec_see/blob/master/public/ReadmeImages/unit_testing.png)
+
+## Feature work
+ - Add more and solid test cases in unit testing
+ - Dockerize the app
+
 ## Stack 
 * [PHP](https://www.php.net/) - Language used
 * [Laravel](https://laravel.com/) - Framework used
