@@ -53,7 +53,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer hVvD3b5gE41afe6PZca68dk'
+      - 'Bearer E6dgbvkc15faDPae86V3Zh4'
     controller: null
     method: null
     route: null
@@ -84,11 +84,11 @@ endpoints:
         name: id
         description: 'number The id of the project the user want to get.'
         required: true
-        example: 13
+        example: 16
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 13
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -123,7 +123,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vZg6P561a4bDfaVke3hdcE8'
+      - 'Bearer eDEPcfhV15a684k36vgZadb'
     controller: null
     method: null
     route: null
@@ -191,7 +191,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 54v8k663eD1hZVPaabgfcEd'
+      - 'Bearer ZbvkVDag58d6e6cf3Eh4a1P'
     controller: null
     method: null
     route: null
@@ -248,7 +248,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a4egP1ca6b6DvE8ZkfV3d5h'
+      - 'Bearer 4Z1kd63eab5DghP6Ef8Vvca'
     controller: null
     method: null
     route: null
@@ -305,7 +305,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer d13a6gEkaeP4bhv8cD65VZf'
+      - 'Bearer 3e8fVvDaP56d6c1a4hkbgZE'
     controller: null
     method: null
     route: null
@@ -336,11 +336,11 @@ endpoints:
         name: id
         description: 'number The id of the task the user want to get.'
         required: true
-        example: 7
+        example: 6
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 7
+      id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -379,7 +379,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer DEa1b8cVghdZav65ekfP463'
+      - 'Bearer f663vc8a1VdEZP5agDhe4kb'
     controller: null
     method: null
     route: null

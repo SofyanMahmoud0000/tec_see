@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: Laravel
+  title: 'Tec-see documentation'
   description: ''
   version: 1.0.0
 servers:
@@ -87,11 +87,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: qui
                 password:
                   type: string
                   description: ''
-                  example: non
+                  example: velit
               required:
                 - email
                 - password
@@ -172,11 +172,11 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: delectus
+                  example: occaecati
                 email:
                   type: string
                   description: ''
-                  example: omnis
+                  example: porro
                 password:
                   type: string
                   description: ''
@@ -184,7 +184,7 @@ paths:
                 password_confirmation:
                   type: string
                   description: 'Enter the password again to confirm it'
-                  example: soluta
+                  example: rerum
               required:
                 - name
                 - email
@@ -303,11 +303,11 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: modi
+                  example: velit
                 description:
                   type: string.
                   description: ''
-                  example: porro
+                  example: molestiae
               required:
                 - title
     get:
@@ -501,11 +501,11 @@ paths:
                 title:
                   type: string.
                   description: ''
-                  example: vero
+                  example: quaerat
                 description:
                   type: string.
                   description: ''
-                  example: labore
+                  example: inventore
     delete:
       summary: 'Delete a project'
       description: 'This endpoint enable the admin to delete a project with specific id'
@@ -563,7 +563,7 @@ paths:
         in: path
         name: id
         description: 'The id of the project to be gotten.'
-        example: 15
+        example: 7
         required: true
         schema:
           type: integer
@@ -642,7 +642,7 @@ paths:
                 detail:
                   type: string
                   description: ''
-                  example: non
+                  example: ut
                 done:
                   type: boolean
                   description: ''
@@ -654,7 +654,7 @@ paths:
         in: path
         name: id
         description: 'The id of the task to be submitted.'
-        example: 6
+        example: 13
         required: true
         schema:
           type: integer
@@ -739,19 +739,19 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: laboriosam
+                  example: ea
                 description:
                   type: string.
                   description: ''
-                  example: incidunt
+                  example: blanditiis
                 project_id:
                   type: integer
                   description: 'The id of the project which the task belong to.'
-                  example: 15
+                  example: 5
                 user_id:
                   type: integer
                   description: 'The id of the user assigned to this task.'
-                  example: 9
+                  example: 17
               required:
                 - title
                 - project_id
@@ -991,11 +991,11 @@ paths:
                 title:
                   type: string.
                   description: ''
-                  example: incidunt
+                  example: hic
                 description:
                   type: string.
                   description: ''
-                  example: facere
+                  example: recusandae
                 project_id:
                   type: integer
                   description: 'The id of the project which the task belong to.'
@@ -1003,15 +1003,15 @@ paths:
                 user_id:
                   type: integer
                   description: 'The id of the user assigned to this task.'
-                  example: 12
+                  example: 9
                 detail:
                   type: string
                   description: ''
-                  example: dicta
+                  example: dolore
                 done:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - project_id
                 - user_id
@@ -1072,7 +1072,7 @@ paths:
         in: path
         name: id
         description: 'The id of the task to be gotten.'
-        example: 7
+        example: 14
         required: true
         schema:
           type: integer
@@ -1134,7 +1134,7 @@ paths:
         in: path
         name: id
         description: 'The id of the task.'
-        example: 8
+        example: 14
         required: true
         schema:
           type: integer
@@ -1142,7 +1142,7 @@ paths:
         in: path
         name: user_id
         description: 'The id of the user to be assigned.'
-        example: 14
+        example: 19
         required: true
         schema:
           type: integer
@@ -1204,7 +1204,7 @@ paths:
         in: path
         name: id
         description: 'The id of the task.'
-        example: 9
+        example: 13
         required: true
         schema:
           type: integer
@@ -1331,7 +1331,7 @@ paths:
         in: path
         name: id
         description: 'number The id of the project the user want to get.'
-        example: 9
+        example: 16
         required: true
         schema:
           type: integer
@@ -1620,7 +1620,7 @@ paths:
         in: path
         name: id
         description: 'number The id of the task the user want to get.'
-        example: 4
+        example: 6
         required: true
         schema:
           type: integer

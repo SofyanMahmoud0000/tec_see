@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Laravel Documentation</title>
+    <title>Tec-see documentation</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 
@@ -25,12 +25,6 @@
                     body .content .javascript-example code { display: none; }
             </style>
 
-    <script>
-        var baseUrl = "http://localhost";
-        var useCsrf = Boolean();
-        var csrfUrl = "/sanctum/csrf-cookie";
-    </script>
-    <script src="../docs/js/tryitout-4.0.0.js"></script>
 
     <script src="../docs/js/theme-default-4.0.0.js"></script>
 
@@ -168,7 +162,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: September 30 2022</li>
+        <li>Last updated: October 1 2022</li>
     </ul>
 </div>
 
@@ -185,7 +179,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -210,8 +204,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"voluptatem\",
-    \"password\": \"non\"
+    \"email\": \"qui\",
+    \"password\": \"velit\"
 }"
 </code></pre></div>
 
@@ -227,8 +221,8 @@ const headers = {
 };
 
 let body = {
-    "email": "voluptatem",
-    "password": "non"
+    "email": "qui",
+    "password": "velit"
 };
 
 fetch(url, {
@@ -293,20 +287,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-login', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-auth-login"
-                    onclick="tryItOut('POSTapi-auth-login');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-auth-login"
-                    onclick="cancelTryOut('POSTapi-auth-login');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-auth-login" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
@@ -320,7 +300,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth-login"
-               value="voluptatem"
+               value="qui"
                data-component="body" hidden>
     <br>
 
@@ -332,7 +312,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth-login"
-               value="non"
+               value="velit"
                data-component="body" hidden>
     <br>
 
@@ -356,10 +336,10 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"delectus\",
-    \"email\": \"omnis\",
+    \"name\": \"occaecati\",
+    \"email\": \"porro\",
     \"password\": \"et\",
-    \"password_confirmation\": \"soluta\"
+    \"password_confirmation\": \"rerum\"
 }"
 </code></pre></div>
 
@@ -375,10 +355,10 @@ const headers = {
 };
 
 let body = {
-    "name": "delectus",
-    "email": "omnis",
+    "name": "occaecati",
+    "email": "porro",
     "password": "et",
-    "password_confirmation": "soluta"
+    "password_confirmation": "rerum"
 };
 
 fetch(url, {
@@ -437,20 +417,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-register', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-auth-register"
-                    onclick="tryItOut('POSTapi-auth-register');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-auth-register"
-                    onclick="cancelTryOut('POSTapi-auth-register');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-auth-register" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
@@ -464,7 +430,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-auth-register"
-               value="delectus"
+               value="occaecati"
                data-component="body" hidden>
     <br>
 
@@ -476,7 +442,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth-register"
-               value="omnis"
+               value="porro"
                data-component="body" hidden>
     <br>
 
@@ -500,7 +466,7 @@ fetch(url, {
                 <input type="text"
                name="password_confirmation"
                data-endpoint="POSTapi-auth-register"
-               value="soluta"
+               value="rerum"
                data-component="body" hidden>
     <br>
 <p>Enter the password again to confirm it</p>
@@ -573,20 +539,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-auth-logout', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-auth-logout"
-                    onclick="tryItOut('DELETEapi-auth-logout');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-auth-logout"
-                    onclick="cancelTryOut('DELETEapi-auth-logout');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-auth-logout" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-red">DELETE</small>
@@ -617,8 +569,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"modi\",
-    \"description\": \"porro\"
+    \"title\": \"velit\",
+    \"description\": \"molestiae\"
 }"
 </code></pre></div>
 
@@ -635,8 +587,8 @@ const headers = {
 };
 
 let body = {
-    "title": "modi",
-    "description": "porro"
+    "title": "velit",
+    "description": "molestiae"
 };
 
 fetch(url, {
@@ -697,20 +649,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-projects', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-projects"
-                    onclick="tryItOut('POSTapi-projects');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-projects"
-                    onclick="cancelTryOut('POSTapi-projects');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-projects" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
@@ -733,7 +671,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-projects"
-               value="modi"
+               value="velit"
                data-component="body" hidden>
     <br>
 
@@ -745,7 +683,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-projects"
-               value="porro"
+               value="molestiae"
                data-component="body" hidden>
     <br>
 
@@ -836,20 +774,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-projects', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-projects"
-                    onclick="tryItOut('GETapi-projects');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-projects"
-                    onclick="cancelTryOut('GETapi-projects');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-projects" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -880,7 +804,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/projects/15" \
+    --get "http://localhost/api/projects/7" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -888,7 +812,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/projects/15"
+    "http://localhost/api/projects/7"
 );
 
 const headers = {
@@ -950,20 +874,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-projects--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-projects--id-"
-                    onclick="tryItOut('GETapi-projects--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-projects--id-"
-                    onclick="cancelTryOut('GETapi-projects--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-projects--id-" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -986,7 +896,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-projects--id-"
-               value="15"
+               value="7"
                data-component="url" hidden>
     <br>
 <p>The id of the project to be gotten.</p>
@@ -1007,20 +917,20 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/projects/4" \
+    "http://localhost/api/projects/2" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"vero\",
-    \"description\": \"labore\"
+    \"title\": \"quaerat\",
+    \"description\": \"inventore\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/projects/4"
+    "http://localhost/api/projects/2"
 );
 
 const headers = {
@@ -1030,8 +940,8 @@ const headers = {
 };
 
 let body = {
-    "title": "vero",
-    "description": "labore"
+    "title": "quaerat",
+    "description": "inventore"
 };
 
 fetch(url, {
@@ -1082,20 +992,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-projects--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-projects--id-"
-                    onclick="tryItOut('PUTapi-projects--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-projects--id-"
-                    onclick="cancelTryOut('PUTapi-projects--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-projects--id-" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-darkblue">PUT</small>
@@ -1118,7 +1014,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-projects--id-"
-               value="4"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>The id of the project to be updated.</p>
@@ -1131,7 +1027,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="PUTapi-projects--id-"
-               value="vero"
+               value="quaerat"
                data-component="body" hidden>
     <br>
 
@@ -1143,7 +1039,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="PUTapi-projects--id-"
-               value="labore"
+               value="inventore"
                data-component="body" hidden>
     <br>
 
@@ -1164,7 +1060,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/projects/16" \
+    "http://localhost/api/projects/12" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1172,7 +1068,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/projects/16"
+    "http://localhost/api/projects/12"
 );
 
 const headers = {
@@ -1228,20 +1124,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-projects--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-projects--id-"
-                    onclick="tryItOut('DELETEapi-projects--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-projects--id-"
-                    onclick="cancelTryOut('DELETEapi-projects--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-projects--id-" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-red">DELETE</small>
@@ -1264,7 +1146,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-projects--id-"
-               value="16"
+               value="12"
                data-component="url" hidden>
     <br>
 <p>The id of the project to be deleted.</p>
@@ -1289,12 +1171,12 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/tasks/6/submit" \
+    "http://localhost/api/tasks/13/submit" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"detail\": \"non\",
+    \"detail\": \"ut\",
     \"done\": true
 }"
 </code></pre></div>
@@ -1302,7 +1184,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/6/submit"
+    "http://localhost/api/tasks/13/submit"
 );
 
 const headers = {
@@ -1312,7 +1194,7 @@ const headers = {
 };
 
 let body = {
-    "detail": "non",
+    "detail": "ut",
     "done": true
 };
 
@@ -1373,20 +1255,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-tasks--id--submit', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-tasks--id--submit"
-                    onclick="tryItOut('POSTapi-tasks--id--submit');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-tasks--id--submit"
-                    onclick="cancelTryOut('POSTapi-tasks--id--submit');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-tasks--id--submit" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
@@ -1409,7 +1277,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="POSTapi-tasks--id--submit"
-               value="6"
+               value="13"
                data-component="url" hidden>
     <br>
 <p>The id of the task to be submitted.</p>
@@ -1422,7 +1290,7 @@ fetch(url, {
                 <input type="text"
                name="detail"
                data-endpoint="POSTapi-tasks--id--submit"
-               value="non"
+               value="ut"
                data-component="body" hidden>
     <br>
 
@@ -1471,10 +1339,10 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"laboriosam\",
-    \"description\": \"incidunt\",
-    \"project_id\": 15,
-    \"user_id\": 9
+    \"title\": \"ea\",
+    \"description\": \"blanditiis\",
+    \"project_id\": 5,
+    \"user_id\": 17
 }"
 </code></pre></div>
 
@@ -1491,10 +1359,10 @@ const headers = {
 };
 
 let body = {
-    "title": "laboriosam",
-    "description": "incidunt",
-    "project_id": 15,
-    "user_id": 9
+    "title": "ea",
+    "description": "blanditiis",
+    "project_id": 5,
+    "user_id": 17
 };
 
 fetch(url, {
@@ -1557,20 +1425,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-tasks', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-tasks"
-                    onclick="tryItOut('POSTapi-tasks');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-tasks"
-                    onclick="cancelTryOut('POSTapi-tasks');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-tasks" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
@@ -1593,7 +1447,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-tasks"
-               value="laboriosam"
+               value="ea"
                data-component="body" hidden>
     <br>
 
@@ -1605,7 +1459,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-tasks"
-               value="incidunt"
+               value="blanditiis"
                data-component="body" hidden>
     <br>
 
@@ -1617,7 +1471,7 @@ fetch(url, {
                 <input type="number"
                name="project_id"
                data-endpoint="POSTapi-tasks"
-               value="15"
+               value="5"
                data-component="body" hidden>
     <br>
 <p>The id of the project which the task belong to.</p>
@@ -1629,7 +1483,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="POSTapi-tasks"
-               value="9"
+               value="17"
                data-component="body" hidden>
     <br>
 <p>The id of the user assigned to this task.</p>
@@ -1728,20 +1582,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-tasks', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-tasks"
-                    onclick="tryItOut('GETapi-tasks');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-tasks"
-                    onclick="cancelTryOut('GETapi-tasks');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-tasks" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -1772,7 +1612,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tasks/7" \
+    --get "http://localhost/api/tasks/14" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1780,7 +1620,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/7"
+    "http://localhost/api/tasks/14"
 );
 
 const headers = {
@@ -1846,20 +1686,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-tasks--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-tasks--id-"
-                    onclick="tryItOut('GETapi-tasks--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-tasks--id-"
-                    onclick="cancelTryOut('GETapi-tasks--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-tasks--id-" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -1882,7 +1708,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-tasks--id-"
-               value="7"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The id of the task to be gotten.</p>
@@ -1903,24 +1729,24 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/tasks/16" \
+    "http://localhost/api/tasks/12" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"incidunt\",
-    \"description\": \"facere\",
+    \"title\": \"hic\",
+    \"description\": \"recusandae\",
     \"project_id\": 4,
-    \"user_id\": 12,
-    \"detail\": \"dicta\",
-    \"done\": true
+    \"user_id\": 9,
+    \"detail\": \"dolore\",
+    \"done\": false
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/16"
+    "http://localhost/api/tasks/12"
 );
 
 const headers = {
@@ -1930,12 +1756,12 @@ const headers = {
 };
 
 let body = {
-    "title": "incidunt",
-    "description": "facere",
+    "title": "hic",
+    "description": "recusandae",
     "project_id": 4,
-    "user_id": 12,
-    "detail": "dicta",
-    "done": true
+    "user_id": 9,
+    "detail": "dolore",
+    "done": false
 };
 
 fetch(url, {
@@ -2002,20 +1828,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-tasks--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-tasks--id-"
-                    onclick="tryItOut('PUTapi-tasks--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-tasks--id-"
-                    onclick="cancelTryOut('PUTapi-tasks--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-tasks--id-" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-darkblue">PUT</small>
@@ -2038,7 +1850,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-tasks--id-"
-               value="16"
+               value="12"
                data-component="url" hidden>
     <br>
 <p>The id of the task to be updated.</p>
@@ -2051,7 +1863,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="PUTapi-tasks--id-"
-               value="incidunt"
+               value="hic"
                data-component="body" hidden>
     <br>
 
@@ -2063,7 +1875,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="PUTapi-tasks--id-"
-               value="facere"
+               value="recusandae"
                data-component="body" hidden>
     <br>
 
@@ -2087,7 +1899,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="PUTapi-tasks--id-"
-               value="12"
+               value="9"
                data-component="body" hidden>
     <br>
 <p>The id of the user assigned to this task.</p>
@@ -2099,7 +1911,7 @@ fetch(url, {
                 <input type="text"
                name="detail"
                data-endpoint="PUTapi-tasks--id-"
-               value="dicta"
+               value="dolore"
                data-component="body" hidden>
     <br>
 
@@ -2143,7 +1955,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/tasks/9" \
+    "http://localhost/api/tasks/2" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2151,7 +1963,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/9"
+    "http://localhost/api/tasks/2"
 );
 
 const headers = {
@@ -2207,20 +2019,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-tasks--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-tasks--id-"
-                    onclick="tryItOut('DELETEapi-tasks--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-tasks--id-"
-                    onclick="cancelTryOut('DELETEapi-tasks--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-tasks--id-" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-red">DELETE</small>
@@ -2243,7 +2041,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-tasks--id-"
-               value="9"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>The id of the task to be deleted.</p>
@@ -2264,7 +2062,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tasks/8/assign_employee/14" \
+    --get "http://localhost/api/tasks/14/assign_employee/19" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2272,7 +2070,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/8/assign_employee/14"
+    "http://localhost/api/tasks/14/assign_employee/19"
 );
 
 const headers = {
@@ -2337,20 +2135,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-tasks--id--assign_employee--user_id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-tasks--id--assign_employee--user_id-"
-                    onclick="tryItOut('GETapi-tasks--id--assign_employee--user_id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-tasks--id--assign_employee--user_id-"
-                    onclick="cancelTryOut('GETapi-tasks--id--assign_employee--user_id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-tasks--id--assign_employee--user_id-" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -2373,7 +2157,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-tasks--id--assign_employee--user_id-"
-               value="8"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The id of the task.</p>
@@ -2385,7 +2169,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="GETapi-tasks--id--assign_employee--user_id-"
-               value="14"
+               value="19"
                data-component="url" hidden>
     <br>
 <p>The id of the user to be assigned.</p>
@@ -2406,7 +2190,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tasks/9/no_employee" \
+    --get "http://localhost/api/tasks/13/no_employee" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2414,7 +2198,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/9/no_employee"
+    "http://localhost/api/tasks/13/no_employee"
 );
 
 const headers = {
@@ -2470,20 +2254,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-tasks--id--no_employee', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-tasks--id--no_employee"
-                    onclick="tryItOut('GETapi-tasks--id--no_employee');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-tasks--id--no_employee"
-                    onclick="cancelTryOut('GETapi-tasks--id--no_employee');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-tasks--id--no_employee" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -2506,7 +2276,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-tasks--id--no_employee"
-               value="9"
+               value="13"
                data-component="url" hidden>
     <br>
 <p>The id of the task.</p>
@@ -2594,20 +2364,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-projects-users', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-projects-users"
-                    onclick="tryItOut('GETapi-projects-users');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-projects-users"
-                    onclick="cancelTryOut('GETapi-projects-users');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-projects-users" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -2639,7 +2395,7 @@ The user must be assigned to a task belongs to this project to be able to get ac
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/projects/9/users" \
+    --get "http://localhost/api/projects/16/users" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2647,7 +2403,7 @@ The user must be assigned to a task belongs to this project to be able to get ac
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/projects/9/users"
+    "http://localhost/api/projects/16/users"
 );
 
 const headers = {
@@ -2709,20 +2465,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-projects--id--users', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-projects--id--users"
-                    onclick="tryItOut('GETapi-projects--id--users');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-projects--id--users"
-                    onclick="cancelTryOut('GETapi-projects--id--users');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-projects--id--users" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -2745,7 +2487,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-projects--id--users"
-               value="9"
+               value="16"
                data-component="url" hidden>
     <br>
 <p>number The id of the project the user want to get.</p>
@@ -2844,20 +2586,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-tasks-users', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-tasks-users"
-                    onclick="tryItOut('GETapi-tasks-users');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-tasks-users"
-                    onclick="cancelTryOut('GETapi-tasks-users');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-tasks-users" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -2955,20 +2683,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-tasks-submitted-users', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-tasks-submitted-users"
-                    onclick="tryItOut('GETapi-tasks-submitted-users');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-tasks-submitted-users"
-                    onclick="cancelTryOut('GETapi-tasks-submitted-users');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-tasks-submitted-users" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -3066,20 +2780,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-tasks-pending-users', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-tasks-pending-users"
-                    onclick="tryItOut('GETapi-tasks-pending-users');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-tasks-pending-users"
-                    onclick="cancelTryOut('GETapi-tasks-pending-users');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-tasks-pending-users" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -3111,7 +2811,7 @@ The user must be assigned to this task to be able to get access the task</p>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tasks/4/users" \
+    --get "http://localhost/api/tasks/6/users" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3119,7 +2819,7 @@ The user must be assigned to this task to be able to get access the task</p>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tasks/4/users"
+    "http://localhost/api/tasks/6/users"
 );
 
 const headers = {
@@ -3185,20 +2885,6 @@ fetch(url, {
       onsubmit="event.preventDefault(); executeTryOut('GETapi-tasks--id--users', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-tasks--id--users"
-                    onclick="tryItOut('GETapi-tasks--id--users');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-tasks--id--users"
-                    onclick="cancelTryOut('GETapi-tasks--id--users');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-tasks--id--users" hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -3221,7 +2907,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="GETapi-tasks--id--users"
-               value="4"
+               value="6"
                data-component="url" hidden>
     <br>
 <p>number The id of the task the user want to get.</p>
